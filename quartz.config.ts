@@ -61,6 +61,10 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
+            cssVars: {
+            "--body-width": "100%",
+            "--side-width": "0px",
+          },
           light: "github-light",
           dark: "github-dark",
         },
