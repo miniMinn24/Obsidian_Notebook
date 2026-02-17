@@ -1,28 +1,33 @@
 ---
 title: CTF Try Out - Writeup by mɨnɨM1nn
 date: 2026-01-22
+tags:
+  - htb
+  - writeup
+  - ctf
+  - event
+  - Linux
 ---
-
-#htb #writeup #linux #ctf #event
 
 ## Introduction
 
-I woke up today with a realization that I'll never be ready to play CTF until I start once. As a complete newcomer, I joined **HTB**'s **CTF Try Out** event and experienced many different kinds of challenges to solve. I came up with an idea why don't also try writing my own writeup for the first time, so I did, with some helps from others' writeups xD.
+I woke up with a realization that when I'll be ready to learn CTF? — Not until I start once for sure.
 
-This full writeup is only meant for anyone to help who can't find a clue, not to cheat, only to learn and enjoy the process.
+As a complete newcomer, I joined HackTheBox's **CTF Try Out** event for my first experience to play CTF. Honestly, I struggled solving these challenges because I have no experience in using tools. The thing I realized is that HTB wants you to never stop exploring and breaking things.
 
-When I was in the struggle solving things and being clueless what's going on, the thing I realized is that HTB wants you to break things, they don't hold your hands to stop.
+I wrote this full walk-through to help anyone who can't find a clue, not to cheat, but to learn and enjoy the process!
 
 > [!NOTE]
 > Since I'm just also a newcomer, please be aware that some writeup details might be **missing** or **un-perfectly explained**, but I gave my full efforts on this. Enjoy!
 
-**Team Name**: mɨnɨM1nn
-**Motto**: "Listen to the silence."
-**Members**: mɨnɨMinn
+## About Team
+- **Team Name**: mɨnɨM1nn
+- **Motto**: "Listen to the silence."
+- **Members**: mɨnɨMinn
 
 ## Preparation
 
-So, to know CTF standards for sure, HTB uses **custom services** on non-standard ports and almost interacted with via `netcat` or Python scripts.
+So, to know CTF standards for sure, HTB uses **custom services** on non-standard ports.
 
 - If the port number is `22`, it's likely SSH:
 
@@ -31,7 +36,7 @@ So, to know CTF standards for sure, HTB uses **custom services** on non-standard
 ssh 126.211.34.10 -p 22
 ```
 
-- Any other port (e.g., `3000`, `9000`, `3657`) - it likely a raw TCP service meant for `netcat`:
+- Any other port (e.g., `3000`, `9000`, `3657`) - it likely a website or a raw TCP service meant for `netcat`:
 
 ```bash
 # Example
@@ -215,7 +220,7 @@ local_c = local_c + 1;
 
 The program expects random numbers contained in that `check` array. It bases on the our input used as a **seed** to `srand()` for `rand()`, it generates a number, which then compared with `check` array expecting to be equal.
 
-What we can do now is we can find where random numbers are **located** in the `check` array. For each located random numbers, we will determine which input character -> used as seed -> then produces that random number value (which the program expects) by `rand()`. 
+What we can do now is we can find where random numbers are **located** in the `check` array. For each located random numbers, we will determine which input character -> used as seed -> then produces that random number value (which the program expects) by `rand()`.
 
 In Ghidra > Decompile window, I double-clicked on `check` function to see its array address:
 ![[Pasted image 20260127214434.png]]
@@ -324,11 +329,47 @@ So, moving on the next functions, we will find another hex values that represent
 
 ![[Pasted image 20260201224647.png]]
 
-After collecting all of these hex values with [Ghex](https://wiki.gnome.org/Apps/Ghex), we finally get the flag. 
+After collecting all of these hex values with [Ghex](https://wiki.gnome.org/Apps/Ghex), we finally get the flag.
 ![[Pasted image 20260201225630.png]]
 
-> While this method can be simple but manual, other players just create their own Python script to automate the process with **Radare2** and **GDB**, but that would requires you to have essential knowledge of these tools. 
+> While this method can be simple but manual, other players just create their own Python script to automate the process with **Radare2** and **GDB**, but that would requires you to have essential knowledge of these tools.
 
 > [!caution]- (SPOILER) Click to see the flag
 > **The Flag:** `HTB{d0nt_p4n1c_c4tch_the_3rror}`
 
+# Web Challenges
+
+## Jailbreak
+
+**Difficulty:** <mark style="background: #ABF7F7A6;">Very easy</mark>
+**Points**: `875`
+**Objective**: Construct a response message by **XML** payload.
+
+I opened the given IP address on a browser:
+![[Pasted image 20260217160440.png]]
+
+I explored around the web and went through all options: STAT, INV, DATA, MAP, RADIO. At ROM, I found an XML document.
+
+![[Pasted image 20260217160926.png]]
+
+I tried submitting that update configuration to see what it does. When we look at the bottom, we can see that the app construct a response message by extracting a specific value `<Version>` from the XML input:
+
+![[Pasted image 20260217161715.png]]
+
+With this chance, I wrote a XML payload to read the flag and present it in `<Version>` tag:
+
+```XML
+<?xml version="1.0"?>
+<!DOCTYPE xxe [
+    <!ENTITY xxe SYSTEM "file:///flag.txt">
+]>
+
+<FirmwareUpdateConfig>
+    <Firmware>
+        <Version>&xxe;</Version>
+    </Firmware>
+</FirmwareUpdateConfig>
+```
+
+> [!caution]- (SPOILER) Click to see the flag
+> **The Flag:** `HTB{b1om3tric_l0cks_4nd_fl1cker1ng_l1ghts_4ce0bd896b24bba122362528a2647a57}`
