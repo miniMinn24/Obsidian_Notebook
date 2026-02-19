@@ -240,4 +240,25 @@ Both shared their public keys, but private keys are kept secret. When Daryll sen
 
 Both Diffie-Hellmen and DSA have elliptic curve variants, referred to as ECDH and ECDSA, respectively.
 
-##
+## Hashing
+(Or a hash function) A type of function or operation that takes in an arbitrary data input and maps it to an output of fixed size, called a hash or digest.
+![[Pasted image 20260219000648.png]]
+
+You feed in any amount of data into a hash function and the resulting output will always be the same size, but the output should be **unique to the input**, such that two different inputs should never yield the same output.  
+Hashing can also be used to identify duplicate data sets in databases or archives to speed up searching of tables or to remove duplicate data to save space.
+
+Cryptographic hashing is distinctly different from encryption because cryptographic hash functions should be one directional. The ideal cryptographic hash function should be **deterministic**, meaning that the same input value should always return the same hash value.
+
+**Hash Collisions**: Two different inputs mapping to the same output.
+
+Hashing example, we can see that a small difference like changing to all lower case results wildly different output:
+```bash
+echo 'Hello Mom' | md5sum
+2b6fa33b32023e88dc3fd3f43982d8f2  -
+echo 'hello mom' | md5sum
+ea893bac2d5652173cedf7c86526acf5  - # Small change, different hash
+echo 'Hello Mom' | md5sum
+2b6fa33b32023e88dc3fd3f43982d8f2  - # Same input, same hash
+```
+
+## Hashing Algorithms
