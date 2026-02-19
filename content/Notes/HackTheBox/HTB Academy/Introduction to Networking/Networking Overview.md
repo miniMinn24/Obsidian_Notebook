@@ -13,7 +13,7 @@ The `/24` network allows computers to talk to each other as long as the <mark st
 **Router** (post office) ---> **ISP** (main office) *searches location* ---> **DNS** returns geo-coordinates
 **Web server** (recieves packet) ---> **Responds** (sends back packets)
 
-![[../attachments/Pasted image 20250715005311.png]]
+![[Pasted image 20250715005311.png]]
 
 ### Extra Points
 1. **DMZ** (Demilitarised Zone) - additional **security layer** to <mark style="background: #ABF7F7A6;">organisation's LAN</mark>. An external network <mark style="background: #ABF7F7A6;">node can access only what is exposed</mark> in DMZ, while rest is protected behind firewall. Without it, it more likely to become **compromised** since clients can initiate communications with that website.

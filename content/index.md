@@ -15,7 +15,7 @@ I'm hosting this my own digital garden (aka knowledge base) to document my path 
 | -------------------------------------------------- | -------- | ------------------------------------------------------- |
 | [[Coursera/Google IT Support]]                     | Coursera | <mark style="background: #FFF3A3A6;">In Progress</mark> |
 | [[Coursera/Google Cybersecurity]]                  | Coursera | <mark style="background: #FFF3A3A6;">In Progress</mark> |
-| [[CyberWarfare Labs/Blue Team Fundamentals (BTF)]] | CWL      | <mark style="background: #FFF3A3A6;">In Progress</mark> |
+| [[Blue Team Fundamentals (BTF)]] | CWL      | <mark style="background: #FFF3A3A6;">In Progress</mark> |
 | [[HackTheBox/]] (Info Sec Fundamentals Pathway)    | HTB      | <mark style="background: #FFF3A3A6;">In Progress</mark> |
 
 > [!INFO] How am I hosting this?
