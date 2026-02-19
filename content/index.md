@@ -11,12 +11,13 @@ I'm hosting this my own digital garden (aka knowledge base) to document my path 
 - **Lab Walkthroughs**: My experiences and guides to solve lab challenges.
 - **Blogs & Contents**: Deep dives into security tools, techniques, and theory.
 
-| Learning                                           | Platform | Status                                                  |
-| -------------------------------------------------- | -------- | ------------------------------------------------------- |
-| [[Coursera/Google IT Support]]                     | Coursera | <mark style="background: #FFF3A3A6;">In Progress</mark> |
-| [[Coursera/Google Cybersecurity]]                  | Coursera | <mark style="background: #FFF3A3A6;">In Progress</mark> |
-| [[Blue Team Fundamentals (BTF)]] | CWL      | <mark style="background: #FFF3A3A6;">In Progress</mark> |
-| [[HackTheBox/]] (Info Sec Fundamentals Pathway)    | HTB      | <mark style="background: #FFF3A3A6;">In Progress</mark> |
+| Learning                                                  | Platform  | Status                                                  |
+| --------------------------------------------------------- | --------- | ------------------------------------------------------- |
+| [[Love at First Breach - Beginner's Track]]               | TryHackMe | <mark style="background: #BBFABBA6;">Finished</mark>    |
+| [[/Notes/Coursera/Google-IT-Support/]]                    | Coursera  | <mark style="background: #FFF3A3A6;">In Progress</mark> |
+| [[/Notes/Coursera/Google-Cybersecurity]]                  | Coursera  | <mark style="background: #FFF3A3A6;">In Progress</mark> |
+| [[Notebook/Notes/CyberWarfare-Labs]]                      | CWL       | <mark style="background: #FFF3A3A6;">In Progress</mark> |
+| [[/Writeups/HackTheBox/]] (Info Sec Fundamentals Pathway) | HTB       | <mark style="background: #FFF3A3A6;">In Progress</mark> |
 
 > [!INFO] How am I hosting this?
 > I love taking all my notes in a single app, **[Obsidian](https://obsidian.md)**, which I always use everyday on my Linux and I host this website with **[Quartz](https://quartz.jzhao.xyz)** on **GitHub**. 
