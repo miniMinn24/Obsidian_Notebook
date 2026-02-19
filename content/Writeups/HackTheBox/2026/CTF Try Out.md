@@ -1,5 +1,4 @@
 ---
-title: CTF Try Out - Writeup by mɨnɨM1nn
 date: 2026-01-22
 tags:
   - htb
