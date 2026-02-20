@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "☕ miniMinn.md",
+    pageTitle: "☕ miniMinn",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
