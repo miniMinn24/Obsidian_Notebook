@@ -343,3 +343,46 @@ The X.509 standard is what defines the format of digital certificates.
 
 A web of trust is where individuals, instead of certificate authorities, sign other individuals public keys:
 ![[Pasted image 20260219235706.png | 400]]
+
+## Cryptography in Action
+**HTTPS** can also be called HTTP over **SSL/TLS** - since encapsulating the HTTP traffic over an encrypted secured channel utilizing SSL or TLS.
+1. A secure communication line, which means data being transmitted is protected from potential eavesdroppers.
+2. The ability to authenticate both parties communicating, though typically only the server is authenticated by the client.
+3. The integrity of communications, meaning there are checks to ensure that messages aren't lost or altered in transit.
+
+![[Pasted image 20260221220415.png]]
+
+The **session key** is the shared symmetric encryption key used in TLS sessions to encrypt data being sent back and forth.
+
+- **Forward Secrecy**: A property of a cryptographic system so that even in the event that the private key is compromised, the session keys are still safe.  
+- **Secure Shell (SSH)**: A secure network protocol that uses encryption to allow access to a network service over unsecured networks (a secure replacement for **telnet, rlogin or rexec**).  
+- **Pretty good privacy (PGP)**: An encryption application that allows authentication of data, along with privacy from third parties, relying upon asymmetric encryption to achieve this.  
+
+## Securing Network Traffic
+
+**Virtual Private Network (VPN)**: A mechanism that allows you to remotely connect a host or network to an internal, private network, passing the data over a public channel, like the internet.  
+![[Pasted image 20260221221714.png]]
+
+**IPsec** works by encrypting an IP packet and encapsulating the encrypted packet inside an IPsec packet - then it gets routed to the VPN end-point where the packet is deencapsulated and decrypted then sent to the final destination:  
+![[Pasted image 20260221221933.png]]
+
+**IPsec** supports **Transport mode** and **Tunnel mode**:
+- When **transport mode** is used, only the payload of the IP packet is encrypted, leaving the IP headers untouched.
+- In **tunnel mode**, the entire IP packet, header payload and all, is encrypted and encapsulated inside a new IP packet with new headers.
+
+The **tunnel** is provided by L2TP which permits the passing of unmodified packets from one network to another.  
+The **secure channel**, on other hand, is provided by IPsec, which provides confidentiality, integrity, and authentication of data being passed (e.g, OpenVPN).
+
+OpenVPN can operate over either TCP or UDP, typically over port 1194. Supports up to 256 bit encryption through the OpenSSL library.
+
+## Cryptographic Hardware
+![[Pasted image 20260221230359.png]]
+
+A **Trusted Platform Module (TPM)** integrated into the hardware of a computer that's dedicated crypto processor.
+- Secure generation of keys
+- Random number generation
+- Remote attestation
+- Data binding and sealing
+Has unique secret RSA key burned into the hardware at the time of manufacture - allows to perform hardware authentication - can detect unauthorized hardware changes to a system.
+
+Data sealing is similar to binding since data is encrypted using the hardware backed encryption key.
