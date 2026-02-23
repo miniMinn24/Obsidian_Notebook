@@ -24,7 +24,7 @@ _My own technical contents and thoughts will be included also._
 | --------------------------------------------------------- | -------- | ------------------------------------------------------- |
 | [[/Notes/Coursera/Google-IT-Support/]]                    | Coursera | <mark style="background: #FFF3A3A6;">In Progress</mark> |
 | [[/Notes/Coursera/Google-Cybersecurity]]                  | Coursera | <mark style="background: #FFF3A3A6;">In Progress</mark> |
-| [[/Notes/CyberWarfare-Labs/Blue-Team-Fundamentals-(BTF)]] | CWL      | <mark style="background: #FFF3A3A6;">In Progress</mark> |
+| [[/Notes/CyberWarfare-Labs/Blue-Team-Fundamentals-(BTF)]] | CWL      | <mark style="background: #BBFABBA6;">Completed</mark>   |
 
 > [!INFO] How am I hosting this?
 > I love taking all my notes in a single app, **[Obsidian](https://obsidian.md)**, which I always use everyday on my Linux and I host this website with **[Quartz](https://quartz.jzhao.xyz)** on **GitHub**.
