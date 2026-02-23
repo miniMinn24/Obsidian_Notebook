@@ -16,7 +16,7 @@ date: 2026-02-22
 - [Forensics Investigation](#forensics-investigation)
   - [Exercise: 1.5 | Memory Dump Analysis](#exercise-15--memory-dump-analysis)
 
-# Deploying the Local Lab with VirtualBox
+# Deploying VirtualBox
 
 > CWL offers hands-on, locally deployable cybersecurity operations through realistic **lab environments**.
 
@@ -315,7 +315,7 @@ Investigate the suspicious external communication activity detected by the netwo
 
 **About RFI**  
 External network communication refers to the interaction and data exchange between a local network and external networks, when a attacker successfully deploy the payload over the host machine it will establish a stable connection between the attacker and the victim.  
- ![[Pasted image 20260222131649.png]]
+ ![[Notebook/Notes/attachments/Pasted image 20260222131649.png]]
 
 The first step of the investigation begins by analysing the given network PCAP. We have provided you with the suspected PCAP file which has been extracted from one of the compromised host machines.
 

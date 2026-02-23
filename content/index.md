@@ -1,5 +1,5 @@
 ---
-title: Hello, I'm miniMinn! ˙𐃷 ˙
+title: Knowledge Base! ˙𐃷 ˙
 date: 2026-01-21
 ---
 
