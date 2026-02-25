@@ -1,5 +1,5 @@
 ---
-title: IT Security - Defense against the digital dark arts
+date: 2026-02-24
 ---
 
 ## Table of Contents
@@ -316,7 +316,7 @@ Clearly, it raises the bar high enough that a rainbow table attack wouldn't be p
 ![[Pasted image 20260219221126.png | 400]]
 
 **CA** (Certificate Authority) is crucial component of a PKI system.  
-There's also an  **RA** (Registration Authority) that's responsible for verifying the identities of any entities requesting certificates to be signed and stored with the CA.  
+There's also an **RA** (Registration Authority) that's responsible for verifying the identities of any entities requesting certificates to be signed and stored with the CA.  
 A central repository is needed to securely store and index keys, and a certificate management system of some sort makes managing access to stored certificates and issuance of certificates easier.
 
 **SSL/TLS** is a certificate that a web server presents to a client as part of the initial secure setup:
@@ -324,9 +324,10 @@ A central repository is needed to securely store and index keys, and a certifica
 
 **Self-signed certificate:** the name implies, these are certificates that are **bound to clients** and are used to **authenticate** the client to the server, allowing access control to an SSL/TLS service.  
 With their own internal CA issues and manages client certificates for their service.  
-There're also **code signing certificates**: Allowing users of these signed applications to verify the signatures and ensure that the application was not tampered with. 
+There're also **code signing certificates**: Allowing users of these signed applications to verify the signatures and ensure that the application was not tampered with.
 
 ## Certificates
+
 The X.509 standard is what defines the format of digital certificates.
 
 | Field                                                 | Description                                                                                                                  |
@@ -345,7 +346,9 @@ A web of trust is where individuals, instead of certificate authorities, sign ot
 ![[Pasted image 20260219235706.png | 400]]
 
 ## Cryptography in Action
+
 **HTTPS** can also be called HTTP over **SSL/TLS** - since encapsulating the HTTP traffic over an encrypted secured channel utilizing SSL or TLS.
+
 1. A secure communication line, which means data being transmitted is protected from potential eavesdroppers.
 2. The ability to authenticate both parties communicating, though typically only the server is authenticated by the client.
 3. The integrity of communications, meaning there are checks to ensure that messages aren't lost or altered in transit.
@@ -354,9 +357,9 @@ A web of trust is where individuals, instead of certificate authorities, sign ot
 
 The **session key** is the shared symmetric encryption key used in TLS sessions to encrypt data being sent back and forth.
 
-- **Forward Secrecy**: A property of a cryptographic system so that even in the event that the private key is compromised, the session keys are still safe.  
-- **Secure Shell (SSH)**: A secure network protocol that uses encryption to allow access to a network service over unsecured networks (a secure replacement for **telnet, rlogin or rexec**).  
-- **Pretty good privacy (PGP)**: An encryption application that allows authentication of data, along with privacy from third parties, relying upon asymmetric encryption to achieve this.  
+- **Forward Secrecy**: A property of a cryptographic system so that even in the event that the private key is compromised, the session keys are still safe.
+- **Secure Shell (SSH)**: A secure network protocol that uses encryption to allow access to a network service over unsecured networks (a secure replacement for **telnet, rlogin or rexec**).
+- **Pretty good privacy (PGP)**: An encryption application that allows authentication of data, along with privacy from third parties, relying upon asymmetric encryption to achieve this.
 
 ## Securing Network Traffic
 
@@ -367,6 +370,7 @@ The **session key** is the shared symmetric encryption key used in TLS sessions 
 ![[Pasted image 20260221221933.png]]
 
 **IPsec** supports **Transport mode** and **Tunnel mode**:
+
 - When **transport mode** is used, only the payload of the IP packet is encrypted, leaving the IP headers untouched.
 - In **tunnel mode**, the entire IP packet, header payload and all, is encrypted and encapsulated inside a new IP packet with new headers.
 
@@ -376,13 +380,73 @@ The **secure channel**, on other hand, is provided by IPsec, which provides conf
 OpenVPN can operate over either TCP or UDP, typically over port 1194. Supports up to 256 bit encryption through the OpenSSL library.
 
 ## Cryptographic Hardware
+
 ![[Pasted image 20260221230359.png]]
 
 A **Trusted Platform Module (TPM)** integrated into the hardware of a computer that's dedicated crypto processor.
+
 - Secure generation of keys
 - Random number generation
 - Remote attestation
 - Data binding and sealing
-Has unique secret RSA key burned into the hardware at the time of manufacture - allows to perform hardware authentication - can detect unauthorized hardware changes to a system.
+  Has unique secret RSA key burned into the hardware at the time of manufacture - allows to perform hardware authentication - can detect unauthorized hardware changes to a system.
 
 Data sealing is similar to binding since data is encrypted using the hardware backed encryption key.
+
+**Secure Element**: A tamper resistant chip often embedded in the microprocessor or integrated into the main board of a mobile device. It supplies secure storage of cryptographic keys and provides a secure environment for applications.  
+**Trusted Execution Environment (TEE)**: Provides full-blown isolated execution environment that runs alongside the main OS.
+
+Options for implementing FDE:
+- PGP (commercial product)
+- Bitlocker (Microsoft)
+- Filevault 2 (Apple)
+- dm-crypt (open-source)
+
+![[Pasted image 20260224211516.png]]
+
+
+## Lab Summary: OpenSSL
+
+### Generating Keys
+Generating a 2048-bit RSA private key:
+```bash
+openssl genrsa -out private_key.pem 2048
+```
+
+Generating a public key:
+```bash
+openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
+```
+
+### Encrypting and Decrypting
+
+Encrypting a text file:
+```bash
+# Create a file
+echo 'Hello mom, this is a secret text.' > secret.txt
+
+# Encryption with public key
+openssl rsautl -encrypt -pubin -inkey public_key.pem -in secret.txt -out secret.enc
+```
+
+Decryption with private key:
+```bash
+openssl rsautl -decrypt -inkey private_key.pem -in secret.enc
+```
+
+### Creating a hash digest
+A hash digest of a message:
+```bash
+openssl dgst -sha256 -sign private_key.pem -out secret.txt.sha256 secret.txt
+```
+
+Performing a verification:
+```bash
+openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
+
+# OUTPUT
+# If successful and file hasn't been modified
+Verified OK
+```
+
+

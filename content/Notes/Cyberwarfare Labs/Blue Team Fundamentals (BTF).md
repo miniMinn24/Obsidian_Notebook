@@ -1,6 +1,8 @@
 ---
 date: 2026-02-22
 ---
+> [!tip] Introduction
+> This is my **note summary** of labs activities that includes Web, Network and Forensic investigations.
 
 **Table of Contents**
 
@@ -16,6 +18,7 @@ date: 2026-02-22
 - [Forensics Investigation](#forensics-investigation)
   - [Exercise: 1.5 | Memory Dump Analysis](#exercise-15--memory-dump-analysis)
 
+---
 # Deploying VirtualBox
 
 > CWL offers hands-on, locally deployable cybersecurity operations through realistic **lab environments**.
