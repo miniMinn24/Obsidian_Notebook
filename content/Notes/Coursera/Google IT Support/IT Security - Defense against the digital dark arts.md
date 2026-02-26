@@ -1,11 +1,11 @@
 ---
 date: 2026-02-24
 ---
+**Table of Contents**
 
-## Table of Contents
+1. [Module 1 - Understanding Security Threats](#module-1---understanding-security-threats)
+2. [Module 2 - Pelcgbybtl (Cryptology)](#module-2---pelcgbybtl-cryptology)
 
-- [[#Module 1 - Understanding Security Threats]]
-- [[#Module 2 - Pelcgbybtl (Cryptology)]]
 
 ---
 
@@ -397,6 +397,7 @@ Data sealing is similar to binding since data is encrypted using the hardware ba
 **Trusted Execution Environment (TEE)**: Provides full-blown isolated execution environment that runs alongside the main OS.
 
 Options for implementing FDE:
+
 - PGP (commercial product)
 - Bitlocker (Microsoft)
 - Filevault 2 (Apple)
@@ -404,16 +405,18 @@ Options for implementing FDE:
 
 ![[Pasted image 20260224211516.png]]
 
-
 ## Lab Summary: OpenSSL
 
 ### Generating Keys
+
 Generating a 2048-bit RSA private key:
+
 ```bash
 openssl genrsa -out private_key.pem 2048
 ```
 
 Generating a public key:
+
 ```bash
 openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
 ```
@@ -421,6 +424,7 @@ openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
 ### Encrypting and Decrypting
 
 Encrypting a text file:
+
 ```bash
 # Create a file
 echo 'Hello mom, this is a secret text.' > secret.txt
@@ -430,17 +434,21 @@ openssl rsautl -encrypt -pubin -inkey public_key.pem -in secret.txt -out secret.
 ```
 
 Decryption with private key:
+
 ```bash
 openssl rsautl -decrypt -inkey private_key.pem -in secret.enc
 ```
 
 ### Creating a hash digest
+
 A hash digest of a message:
+
 ```bash
 openssl dgst -sha256 -sign private_key.pem -out secret.txt.sha256 secret.txt
 ```
 
 Performing a verification:
+
 ```bash
 openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
 
@@ -449,4 +457,127 @@ openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.
 Verified OK
 ```
 
+
+## Lab Summary: Hands-on with hashing
+
+### MD5
+
+Verifying a valid file:
+```bash
+# Test file
+echo 'Hello mom!' > file.txt
+
+# Generating a hashed file
+md5sum file.txt > file.txt.md5
+
+# Take a look at the hash
+cat file.txt.md5
+
+7514140760aa7da676090b97bd41ee8a  file.txt
+
+# Verifying hash
+md5sum -c file.txt.md5
+
+file.txt: OK
+```
+
+Verifying an invalid file:
+```bash
+# Duplicate to test invalidity
+cp file.txt badfile.txt
+
+# Generate hash
+md5sum badfile.txt > badfile.txt.md5
+
+# Read hash: Both files currently have the same hash
+cat badfile.txt.md5
+cat file.txt.md5
+
+# Modify bad file
+vim badfile.txt # add an extra space
+
+# Verify hash: a tiny modification results huge effect in hashing
+md5sum -c badfile.txt.md5
+
+badfile.txt: FAILED
+md5sum: WARNING: 1 computed checksum did NOT match
+
+# See how different the hash of the edited file is
+md5sum badfile.txt > new.badfile.txt.md5
+cat new.badfile.txt.md5
+```
+
+### SHA1
+
+```bash
+# Test files
+shasum file.txt > file.txt.sha1
+
+# Read hash
+cat file.txt.sha1
+
+# Verifying hash
+shasum -c file.txt.sha1
+```
+
+### SHA256
+```bash
+# Test files
+shasum -a 256 file.txt > file.txt.sha256
+
+# Read hash
+cat file.txt.sha256
+
+# Verifying hash
+shasum -c file.txt.sha256
+```
+
+---
+# Module 3 - The 3 A's of Cybersecurity: Authentication, Authorization, Accounting
+
+## Best Practices for Authentication
+
+They're different:
+- "authn" (for authentication)
+- "authz" (for authorization)
+
+Incorporating **good password policies** into an organization is key to ensuring that employees are securing their accounts with **strong passwords**.
+- Length requirements
+- Character complexity
+- Dictionary words
+
+## Multifactor Authentication
+A system where users are authenticated by presenting multiple peeces of information or objects.
+- Something you know = Password / PIN
+- Something you have = ATM / Bank card
+- Something you are = Biometric ID
+
+An example RSA SecureID token:
+![[Pasted image 20260226151405.png | 400]]
+
+Counter-based, incremented every time:
+![[Pasted image 20260226151637.png]]
+
+## Multifactor Authentication Options
+**Biometric Authentication**: The process of using unique physiological characteristics of an individual to identify them.
+
+![[Pasted image 20260226152606.png | 400]]
+
+![[Pasted image 20260226153035.png | 400]]
+
+## Certificates, Part Two
+
+In order to issue client certificates, an organization must setup and maintain CA infrastructure to issue and sign certificates.
+
+**Certificate Revocation List (CRL)**: A signed list published by the CA which defines certificates that have been explicitly revoked.
+
+## RADIUS
+**Remote Authentication Dial-In User Service** - A protocol that provides AAA services for users on a network.
+
+![[Pasted image 20260226155943.png]]
+
+## Kerberos
+A network authentication protocol that uses "tickets" to allow entities to prove their identity over potentially insecure channels to provide mutual authentication.
+
+The authentication tickets let users authenticate to services without requiring username and password authentication for every service individually. A ticket will expire after some time, but it has provisions for automatic transparent renewal of the ticket.
 
