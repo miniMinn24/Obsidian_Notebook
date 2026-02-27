@@ -3,8 +3,10 @@ date: 2026-02-24
 ---
 **Table of Contents**
 
-1. [Module 1 - Understanding Security Threats](#module-1---understanding-security-threats)
-2. [Module 2 - Pelcgbybtl (Cryptology)](#module-2---pelcgbybtl-cryptology)
+- [Module 1 - Understanding Security Threats](#module-1---understanding-security-threats)
+- [Module 2 - Pelcgbybtl (Cryptology)](#module-2---pelcgbybtl-cryptology)
+- [Module 3 - The 3 A's of Cybersecurity: Authentication, Authorization, Accounting](#module-3---the-3-as-of-cybersecurity-authentication-authorization-accounting)
+- [Module 4 - Securing Your Networks](#module-4---securing-your-networks)
 
 
 ---
@@ -580,4 +582,189 @@ In order to issue client certificates, an organization must setup and maintain C
 A network authentication protocol that uses "tickets" to allow entities to prove their identity over potentially insecure channels to provide mutual authentication.
 
 The authentication tickets let users authenticate to services without requiring username and password authentication for every service individually. A ticket will expire after some time, but it has provisions for automatic transparent renewal of the ticket.
+
+## TACACS+
+**Terminal Access Controller Access-Control System Plus** is primarily used for device administration, authentication, authorization and accounting. Mainly used as an authentication for network infrastructure devices - tend to be high value for attackers.
+
+## Single Sign-on (SSO)
+An authentication concept that allows users to authenticate once to be granted access to a lot of different services and applications.
+
+![[Pasted image 20260227113948.png]]
+
+An example of an SSO system is the OpenID decentralized authentication system:
+![[Pasted image 20260227114146.png | 400]]
+
+## Authorization and Access Control Methods
+**Authorization** pertains to describing what the user account has access to, or doesn't have access to.  
+
+## Mobile Security Methods
+**Common mobile security threats and challenges**:
+- Phishing
+- Malicious applications (malware)
+- Insecure Wi-Fi and "meddler in the middle" attacks
+- Poor update habits for devices and apps
+**Security measures used to protect mobile devices**:
+- **Screen Locks**
+	- Facial recognition
+	- PIN codes
+	- Fingerprint recognition
+	- Pattern uses
+- **Remote wipes**
+	- Locator applications
+	- OS updates
+	- Device encryption
+	- Remote backup applications
+	- Failed login attempt restrictions
+	- Antivirus/Antimalware
+	- Firewalls
+
+## Access Control
+**OAuth** is an open standard that allows users to grant third-party websites and applications access to their information without sharing account credentials.
+
+![[Pasted image 20260227122800.png]]
+
+**OAuth** permissions can be used in phishing-style attacks to gain access to accounts, without requiring credentials to be compromised.
+
+![[Pasted image 20260227123128.png]]
+
+## Access Control List (ACL)
+![[Pasted image 20260227123423.png]]
+
+Network ACLs can be defined for incoming and outgoing traffic. They can also be used to restrict external access to systems and limit outgoing traffic to enforce policies or to prevent unauthorized outbound data transfers. 
+
+## Tracking Usage and Access
+**Accounting (The final of AAA)**: Keeping records of what resources and services your users accessed, or what they did when they were using your systems.
+
+**TACACS+** is a device access AAA system that manages who has access to your network devices and what they do on them.
+
+Cisco's AAA system supports accounting of:
+- Individual commands executed
+- connection to and from network devices.
+- Commands executed in privileged mode
+- Network services and system details like configuration reloads or reboots
+
+Radius accounting kicks off with the network access server sending an **accounting request packet** to the accounting server that contains an event record to be logged:
+
+![[Pasted image 20260227124625.png]]
+
+---
+# Module 4 - Securing Your Networks
+
+## Network Hardening Best Practices
+The process of securing a network by reducing its potential vulnerabilities through configuration changes and taking specific steps.
+
+**Implicit Deny** is a network security concept where anything not explicityly permitted or allowed should be denied.  
+**Analyzing logs** is the practice of collecting logs from different network and sometimes client devices on your network, then performing an automated analysis on them.  
+**Logs analysis systems** are configured using user-defined rules to match interesting or atypical log entries.  
+**Normalizing log data** is an important step, since logs from different devices and systems may not be formatted in a common way.  
+**Correlation analysis** is the process of taking log data from different systems and matching events across the systems.  
+
+**Splunk**  
+Popular and powerful logs analysis system - very flexible and extensible log aggregation and search system.
+
+![[Pasted image 20260227143143.png]]
+
+**Flood guards** - Provide protection against DoS
+
+![[Pasted image 20260227143555.png]]
+A common open-source flood guard protection tool is **Fail2Ban**.
+
+Network separation or VLANs is also a good concept for security:
+
+![[Pasted image 20260227143747.png | 400]]
+
+## Network Hardware Hardening
+
+![[Pasted image 20260227144024.png | 400]]
+
+If an attacker can manage to deploy a rogue DHCP server on your network, they could hand out DHCP leases with whatever information they want.
+
+The enterprise switches offer a feature called **DHCP snooping**:
+
+![[Pasted image 20260227144257.png]]
+
+DHCP snooping also makes you designate either a trusted DHCP server IP, if it's operating as a DHCP helper, and forwarding DHCP requests to the server, or you can enable DHCP snooping trust on the up-linked port, where legitimate DHCP responses would now come from
+
+**Gratuitous ARP response** - effectively answering a query that no one made.
+
+![[Pasted image 20260227152654.png]]
+
+**EAP-TLS** is an authentication type supported by EAP that uses TLS to provide mutual authentication of both the client and the authenticating server.
+
+![[Pasted image 20260227153055.png]]
+
+## IEEE 802.1X
+
+### Authentication
+- **Supplicant** - client making request to access LAN/WLAN
+- **Authenticator** takes packet from supplicant and sends it to authentication server until session is authenticated. Any other info sent before authentication occurs is dropped.
+- **Authentication server** provides a database of info required for authentication, and informs authenticator to deny or permit access.
+
+### Authentication Methods
+- **Shared key system** - shared key or passphrase that is manually set on both device and AP.
+- **Open system** - when authentication server has a list of authorized clients to check against when a client requests access. List is usually in the form of MAC addresses but varies by network.
+
+#### Shared Key Authentication Methods
+- **Wired Equivalent Privacy (WEP)** - not recommended for secure WLAN. Hackers can capture encrypted form of an authentication response frame, using widely software and using info to crack WEP encryption.
+- **Wi-Fi Protected Access (WPA)** - complies with wireless security standard and increase data protection level. Enforcing IEE 802.1X authentication and key-exchange and only works with dynamic encryption keys.
+- **Wi-Fi Protected Access 2 (WPA2)** - security enhancement to WPA. Users must ensure mobile and AP are configured using the same WPA version and pre-shared key (PSK).
+- **Association** - allows AP to record each mobile device so that data is properly delivered - After authentication is complete.
+
+## Network Software Hardening
+
+VPNs are commonly used to provide **secure remote access**, and **link wo networks** securely.
+
+Common reverse proxies:
+ - HAProxy
+ - nginx
+ - Apache
+
+## WEP Encryption and Why You Shouldn't Use It
+
+![[Pasted image 20260227160933.png]]
+
+**Open system** authentication:
+![[Pasted image 20260227161212.png]]
+
+## Let's Get Rid of WEP!
+
+**WPA**: Designed as a short-term replacement that would be compatible with older WEP-enabled hardware with a simple firmware update.
+
+**TKIP (Temporal Key Integrity Protocol)**:
+1. A more secure key derivation method was used to more securely incorporate the IV into the per packet encryption.
+2. A sequence counter was implemented to prevent replay attacks by rejecting out of order packets.
+3. A 64-bit MIC or Message Integrity Check was introduced to prevent forging, tampering, or corruption of packets.
+
+![[Pasted image 20260227161926.png]]
+
+Under WPA, the **pre-shared key** is the Wi-Fi password you share with people when they come over and want to use your wireless network.
+
+## WPA2
+**CCMP** (Counter Mode CBC-MAC Protocol)
+
+![[Pasted image 20260227162712.png]]
+
+**PTK (Pairwise Transient Key)** is generated using the PMK, AP nonce, Client nonce, AP MAC address and client MAC address. Actually made up of five individual keys, each with their own purpose.  
+- Two keys are used for encryption and confirmation of EAPoL  packets, and the encapsulating protocol carries these messages.
+- Two keys are used for sending and receiving message integrity codes.
+- And finally, there's temporal key, which is actually used to encrypt data.
+Since this type of traffic must be readable by all clients connected to an AP, this GTK is shared between all clients. It's updated and re-transmitted periodically, and when a client disassociates the AP.
+
+![[Pasted image 20260227163327.png | 400]]
+
+## Wireless Hardening
+
+If 802.1X is too complicated for a company, the next best alternative would be WPA2 with AES/CCMP mode.
+
+A long and complex passphrase that wouldn't be found n a dictionary would increase the amount of time and resources and attacker would need to break the passphrase.
+
+If your company values security over convenience, you should make sure that WPS isn't enabled on your APs.
+
+## Packet Sniffing (Packet Capture)
+The process of intercepting network packets in their entirety for analysis.
+
+**Promiscuous Mode**: A type of computer networking operational mode in which all network data packets can be accessed and viewed by all network adapters operating in this mode.  
+**Port Mirroring**: Allows the switch to take all packets from a specified port, port range, or entire VLAN and mirror the packets to a specified switch port.  
+**Monitor Mode**: Allows us to scan across channels to see all wireless traffic being sent by APs and clients.
+
 
