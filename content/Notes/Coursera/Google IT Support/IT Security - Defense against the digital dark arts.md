@@ -1,13 +1,15 @@
 ---
 date: 2026-02-24
 ---
+
 **Table of Contents**
 
 - [Module 1 - Understanding Security Threats](#module-1---understanding-security-threats)
 - [Module 2 - Pelcgbybtl (Cryptology)](#module-2---pelcgbybtl-cryptology)
 - [Module 3 - The 3 A's of Cybersecurity: Authentication, Authorization, Accounting](#module-3---the-3-as-of-cybersecurity-authentication-authorization-accounting)
 - [Module 4 - Securing Your Networks](#module-4---securing-your-networks)
-
+- [Module 5 - Defense in Depth](#module-5---defense-in-depth)
+- [Module 6 - Creating a Company Culture for Security](#module-6---creating-a-company-culture-for-security)
 
 ---
 
@@ -459,12 +461,12 @@ openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.
 Verified OK
 ```
 
-
 ## Lab Summary: Hands-on with hashing
 
 ### MD5
 
 Verifying a valid file:
+
 ```bash
 # Test file
 echo 'Hello mom!' > file.txt
@@ -484,6 +486,7 @@ file.txt: OK
 ```
 
 Verifying an invalid file:
+
 ```bash
 # Duplicate to test invalidity
 cp file.txt badfile.txt
@@ -523,6 +526,7 @@ shasum -c file.txt.sha1
 ```
 
 ### SHA256
+
 ```bash
 # Test files
 shasum -a 256 file.txt > file.txt.sha256
@@ -535,21 +539,26 @@ shasum -c file.txt.sha256
 ```
 
 ---
+
 # Module 3 - The 3 A's of Cybersecurity: Authentication, Authorization, Accounting
 
 ## Best Practices for Authentication
 
 They're different:
+
 - "authn" (for authentication)
 - "authz" (for authorization)
 
 Incorporating **good password policies** into an organization is key to ensuring that employees are securing their accounts with **strong passwords**.
+
 - Length requirements
 - Character complexity
 - Dictionary words
 
 ## Multifactor Authentication
+
 A system where users are authenticated by presenting multiple peeces of information or objects.
+
 - Something you know = Password / PIN
 - Something you have = ATM / Bank card
 - Something you are = Biometric ID
@@ -561,6 +570,7 @@ Counter-based, incremented every time:
 ![[Pasted image 20260226151637.png]]
 
 ## Multifactor Authentication Options
+
 **Biometric Authentication**: The process of using unique physiological characteristics of an individual to identify them.
 
 ![[Pasted image 20260226152606.png | 400]]
@@ -574,19 +584,23 @@ In order to issue client certificates, an organization must setup and maintain C
 **Certificate Revocation List (CRL)**: A signed list published by the CA which defines certificates that have been explicitly revoked.
 
 ## RADIUS
+
 **Remote Authentication Dial-In User Service** - A protocol that provides AAA services for users on a network.
 
 ![[Pasted image 20260226155943.png]]
 
 ## Kerberos
+
 A network authentication protocol that uses "tickets" to allow entities to prove their identity over potentially insecure channels to provide mutual authentication.
 
 The authentication tickets let users authenticate to services without requiring username and password authentication for every service individually. A ticket will expire after some time, but it has provisions for automatic transparent renewal of the ticket.
 
 ## TACACS+
+
 **Terminal Access Controller Access-Control System Plus** is primarily used for device administration, authentication, authorization and accounting. Mainly used as an authentication for network infrastructure devices - tend to be high value for attackers.
 
 ## Single Sign-on (SSO)
+
 An authentication concept that allows users to authenticate once to be granted access to a lot of different services and applications.
 
 ![[Pasted image 20260227113948.png]]
@@ -595,49 +609,56 @@ An example of an SSO system is the OpenID decentralized authentication system:
 ![[Pasted image 20260227114146.png | 400]]
 
 ## Authorization and Access Control Methods
-**Authorization** pertains to describing what the user account has access to, or doesn't have access to.  
+
+**Authorization** pertains to describing what the user account has access to, or doesn't have access to.
 
 ## Mobile Security Methods
+
 **Common mobile security threats and challenges**:
+
 - Phishing
 - Malicious applications (malware)
 - Insecure Wi-Fi and "meddler in the middle" attacks
 - Poor update habits for devices and apps
-**Security measures used to protect mobile devices**:
+  **Security measures used to protect mobile devices**:
 - **Screen Locks**
-	- Facial recognition
-	- PIN codes
-	- Fingerprint recognition
-	- Pattern uses
+  - Facial recognition
+  - PIN codes
+  - Fingerprint recognition
+  - Pattern uses
 - **Remote wipes**
-	- Locator applications
-	- OS updates
-	- Device encryption
-	- Remote backup applications
-	- Failed login attempt restrictions
-	- Antivirus/Antimalware
-	- Firewalls
+  - Locator applications
+  - OS updates
+  - Device encryption
+  - Remote backup applications
+  - Failed login attempt restrictions
+  - Antivirus/Antimalware
+  - Firewalls
 
 ## Access Control
+
 **OAuth** is an open standard that allows users to grant third-party websites and applications access to their information without sharing account credentials.
 
-![[Pasted image 20260227122800.png]]
+![[Pasted image 20260227122800.png | 400]]
 
 **OAuth** permissions can be used in phishing-style attacks to gain access to accounts, without requiring credentials to be compromised.
 
 ![[Pasted image 20260227123128.png]]
 
 ## Access Control List (ACL)
-![[Pasted image 20260227123423.png]]
 
-Network ACLs can be defined for incoming and outgoing traffic. They can also be used to restrict external access to systems and limit outgoing traffic to enforce policies or to prevent unauthorized outbound data transfers. 
+![[Pasted image 20260227123423.png | 400]]
+
+Network ACLs can be defined for incoming and outgoing traffic. They can also be used to restrict external access to systems and limit outgoing traffic to enforce policies or to prevent unauthorized outbound data transfers.
 
 ## Tracking Usage and Access
+
 **Accounting (The final of AAA)**: Keeping records of what resources and services your users accessed, or what they did when they were using your systems.
 
 **TACACS+** is a device access AAA system that manages who has access to your network devices and what they do on them.
 
 Cisco's AAA system supports accounting of:
+
 - Individual commands executed
 - connection to and from network devices.
 - Commands executed in privileged mode
@@ -645,19 +666,21 @@ Cisco's AAA system supports accounting of:
 
 Radius accounting kicks off with the network access server sending an **accounting request packet** to the accounting server that contains an event record to be logged:
 
-![[Pasted image 20260227124625.png]]
+![[Pasted image 20260227124625.png | 400]]
 
 ---
+
 # Module 4 - Securing Your Networks
 
 ## Network Hardening Best Practices
+
 The process of securing a network by reducing its potential vulnerabilities through configuration changes and taking specific steps.
 
 **Implicit Deny** is a network security concept where anything not explicityly permitted or allowed should be denied.  
 **Analyzing logs** is the practice of collecting logs from different network and sometimes client devices on your network, then performing an automated analysis on them.  
 **Logs analysis systems** are configured using user-defined rules to match interesting or atypical log entries.  
 **Normalizing log data** is an important step, since logs from different devices and systems may not be formatted in a common way.  
-**Correlation analysis** is the process of taking log data from different systems and matching events across the systems.  
+**Correlation analysis** is the process of taking log data from different systems and matching events across the systems.
 
 **Splunk**  
 Popular and powerful logs analysis system - very flexible and extensible log aggregation and search system.
@@ -696,15 +719,18 @@ DHCP snooping also makes you designate either a trusted DHCP server IP, if it's 
 ## IEEE 802.1X
 
 ### Authentication
+
 - **Supplicant** - client making request to access LAN/WLAN
 - **Authenticator** takes packet from supplicant and sends it to authentication server until session is authenticated. Any other info sent before authentication occurs is dropped.
 - **Authentication server** provides a database of info required for authentication, and informs authenticator to deny or permit access.
 
 ### Authentication Methods
+
 - **Shared key system** - shared key or passphrase that is manually set on both device and AP.
 - **Open system** - when authentication server has a list of authorized clients to check against when a client requests access. List is usually in the form of MAC addresses but varies by network.
 
 #### Shared Key Authentication Methods
+
 - **Wired Equivalent Privacy (WEP)** - not recommended for secure WLAN. Hackers can capture encrypted form of an authentication response frame, using widely software and using info to crack WEP encryption.
 - **Wi-Fi Protected Access (WPA)** - complies with wireless security standard and increase data protection level. Enforcing IEE 802.1X authentication and key-exchange and only works with dynamic encryption keys.
 - **Wi-Fi Protected Access 2 (WPA2)** - security enhancement to WPA. Users must ensure mobile and AP are configured using the same WPA version and pre-shared key (PSK).
@@ -715,9 +741,10 @@ DHCP snooping also makes you designate either a trusted DHCP server IP, if it's 
 VPNs are commonly used to provide **secure remote access**, and **link wo networks** securely.
 
 Common reverse proxies:
- - HAProxy
- - nginx
- - Apache
+
+- HAProxy
+- nginx
+- Apache
 
 ## WEP Encryption and Why You Shouldn't Use It
 
@@ -731,6 +758,7 @@ Common reverse proxies:
 **WPA**: Designed as a short-term replacement that would be compatible with older WEP-enabled hardware with a simple firmware update.
 
 **TKIP (Temporal Key Integrity Protocol)**:
+
 1. A more secure key derivation method was used to more securely incorporate the IV into the per packet encryption.
 2. A sequence counter was implemented to prevent replay attacks by rejecting out of order packets.
 3. A 64-bit MIC or Message Integrity Check was introduced to prevent forging, tampering, or corruption of packets.
@@ -740,15 +768,17 @@ Common reverse proxies:
 Under WPA, the **pre-shared key** is the Wi-Fi password you share with people when they come over and want to use your wireless network.
 
 ## WPA2
+
 **CCMP** (Counter Mode CBC-MAC Protocol)
 
 ![[Pasted image 20260227162712.png]]
 
-**PTK (Pairwise Transient Key)** is generated using the PMK, AP nonce, Client nonce, AP MAC address and client MAC address. Actually made up of five individual keys, each with their own purpose.  
-- Two keys are used for encryption and confirmation of EAPoL  packets, and the encapsulating protocol carries these messages.
+**PTK (Pairwise Transient Key)** is generated using the PMK, AP nonce, Client nonce, AP MAC address and client MAC address. Actually made up of five individual keys, each with their own purpose.
+
+- Two keys are used for encryption and confirmation of EAPoL packets, and the encapsulating protocol carries these messages.
 - Two keys are used for sending and receiving message integrity codes.
 - And finally, there's temporal key, which is actually used to encrypt data.
-Since this type of traffic must be readable by all clients connected to an AP, this GTK is shared between all clients. It's updated and re-transmitted periodically, and when a client disassociates the AP.
+  Since this type of traffic must be readable by all clients connected to an AP, this GTK is shared between all clients. It's updated and re-transmitted periodically, and when a client disassociates the AP.
 
 ![[Pasted image 20260227163327.png | 400]]
 
@@ -761,10 +791,284 @@ A long and complex passphrase that wouldn't be found n a dictionary would increa
 If your company values security over convenience, you should make sure that WPS isn't enabled on your APs.
 
 ## Packet Sniffing (Packet Capture)
+
 The process of intercepting network packets in their entirety for analysis.
 
 **Promiscuous Mode**: A type of computer networking operational mode in which all network data packets can be accessed and viewed by all network adapters operating in this mode.  
 **Port Mirroring**: Allows the switch to take all packets from a specified port, port range, or entire VLAN and mirror the packets to a specified switch port.  
 **Monitor Mode**: Allows us to scan across channels to see all wireless traffic being sent by APs and clients.
+
+## Wireshark and TCPDump
+
+**TCPDump** is a super popular, lightweight, command-line based utility that you can use to capture and analyze packets.
+
+**Wireshark** is a great tool for network traffic analysis that provides way more powerful complex filtering and easier navigation.
+
+## Intrusion Detection/Prevention Systems (IDS/IPS)
+
+IDS or IPS systems operate by monitoring network traffic and analyzing it.
+
+**Network Intrusion Detection System (NIDS)**: The detection system would be deployed somewhere on a network where it can monitor traffic for a network segment or subnet.
+
+![[Pasted image 20260227191623.png | 400]]
+
+**Signatures**  
+Unique characteristics of known malicious traffic.  
+They might be specific sequences of packets, or packets with certain value encoded in the specific header field.
+
+![[Pasted image 20260227192013.png | 400]]
+
+## Unified Threat Management (UTM)
+
+### UTM options and configurations
+
+**UTM hardware and software options**:
+
+- Stand-alone UTM network appliance
+- Set of UTM networked appliances or devices
+- UTM server software application(s)
+  **Extent of UTM protection options**:
+- Single host
+- Entire network
+  **UTM security service and tool options can include**:
+- Firewall
+- Intrusion detection system (IDS)
+- Intrusion prevention system (IPS)
+- Antivirus software
+- Anti-malware software
+- Spam gateway
+- Web and content filters
+- Data leak/loss prevention (DLP)
+- Virtual Private Network (VPN)
+
+### Stream-based vs. proxy-based UTM inspections
+
+- Stream-based inspection, also called flow-based inspection
+- Proxy-based inspection
+
+### Benefits of using UTM
+
+- Cost-effective
+- Flexible and adaptable
+- Offers integrated and centralized management
+
+### Risks of using UTM
+
+- Can become a single point of failure in a network security attack
+- Might be a waste of resources for small businesses
+
+---
+
+# Module 5 - Defense in Depth
+
+## Intro to Defense in Depth
+
+The concept of having multiple, overlapping systems of defense to protect IT systems.
+
+## Disabling Unnecessary Components
+
+- **Attack Vector**: The method or mechanism by which an attacker or malware gains access to a network or system.
+- **Attack Surface**: The sum of all the different attack vectors in a given system.
+
+> The less complex something is, the less likely there will be undetected flaws.
+
+Telnet access for a managed switch has no business being enabled in a real-world environment.
+
+## Host-Based Firewall
+
+Protect individual hosts from being compromised when they're used in untrusted, potentially malicious environments.
+
+A **host-based firewall** plays a big part in reducing what's accessible to an outside attacker.
+
+![[Pasted image 20260227230643.png | 400]]
+
+If the users of the system have administrator rights, then they have the ability to change **firewall rules and configurations**.
+
+## Logging and Auditing
+
+**SIEMS (Security Information and Event Management Systems)** - A centralized log server with some extra analysis features too.
+
+**Normalization**: The process of taking log data in different formats and converting it into a standardized format that's consistent with a defined log structure.
+
+Once logs are centralized and standardized, you can write automated altering based on rules.
+
+Popular SIEM tools:
+
+- rsyslog
+- Splunk Enterprise Security
+- IBM Security Qradar
+- RSA Security Analytics
+
+## Windows Defender Guide
+
+### Microsoft 365 Defender Services
+
+- Defender for Endpoint
+- Defender Vulnerability Management
+- Defender for Office 365
+- Defender for Identity
+- Azure Active Directory Identity Protection
+- Defender for Cloud Apps
+
+### Using Microsoft 365 Defender
+
+- Identities
+- Data
+- Devices
+- Apps
+- Incidents
+- Alerts
+- Advanced hunting
+- Threat Analytics
+- Secure score
+- Learning hub
+- Reports
+
+## Antimalware Protection
+
+Lots of unprotected systems would be compromised **in a matter of minutes** if directly connected to the internet without any safeguards or protections in place.
+
+Antivirus software will monitor and analyze things, like new files being created or being modified on the system, in order to watch for any behavior that matches a known malware signature.
+
+> **Antivirus software** is just one piece of our anti-malware defenses.
+
+Binary whitelisting software operates off a white list. It's a list of known good and trusted software and only things that are on the list permitted to run. Everything else if blocked.
+
+![[Pasted image 20260228125945.png | 400]]
+
+Software signing or coding signing:
+
+![[Pasted image 20260228130229.png | 400]]
+
+## Disk Encryption
+
+![[Pasted image 20260228131349.png | 400]]
+
+**Secure Boot**: Uses public key cryptography to secure these encrypted elements of the boot process - does by integrated code signing and verification of the boot files.
+
+Secure boot is configured with **Platform key**  
+The public key corresponding to the private key used to sign the boot files - written to firmware and is used at boot-time verify the signature of the boot files.
+
+> When you implement a full disk encryption solution at scale, it's super important to think about how to handle cases where passwords are forgotten.
+
+**Key Escrow**: Allows the encryption key to be securely stored for later retrieval by an authorized party.
+
+**File-Based Encryption**: Where only some files or folders are encrypted and not the entire disk.
+
+Home directory or file-based encryption only guarantees confidentiality and integrity of files protected by encryption.
+
+## Software Patch Management
+
+As an IT Support Specialist, it's critical that you make sure that you install software updates and security patches in a timely way, in order to **defend your company's systems and networks.**
+
+The best protection is to have a **good system and policy** in place for your company. Critical infrastructure devices should be approached carefully when you apply updates.
+
+There's always the risk that a software update will introduce a new bug that might affect the functionality of the device.
+
+## Application Policies
+
+A common recommendation, or even a requirement, is to only support or require the **lastest version** of a piece of software.
+
+It's generally a good idea to **disallow risky classes** of software by policy. Things like file sharing and piracy-related software tend to be closely associated with malware infections.
+
+Understanding **what your users need** to do their jobs will help shape your approach to software policies and guidelines. Helping your users accomplish tasks by recommending or supporting specific software makes for a more **secure environment**.
+
+Browser Extensions that require full access to web sites visited can be risky, since the extension developer has the power to modify pages visited.
+
+---
+
+# Module 6 - Creating a Company Culture for Security
+
+## Security Goals
+
+If your company handles credit card payments, then you have to follow the **PCI DSS**, or **Payment Card Industry Data Security Standard**.
+
+**PCI DSS** objectives:
+
+1. Build a maintain a secure network and systems.
+2. Protect cardholder data.
+3. Maintain a vulnerability management program.
+4. Implement strong access control measures.
+5. Regularly monitor and test networks.
+6. Maintain a information security policy.
+
+## Measuring and Assessing Risk
+
+Security is all about determining **risks** or exposure; understanding the likelihood of **attacks**; and designing **defenses** around these risks to **minimize** the impact of an attack.
+
+Security risk assessment starts with **threat modeling**.
+
+Typically, any kind of user data is considered high value, especially if payment processing is involved.
+
+**Vulnerability Scanner**: A computer program designed to assess computers, computer systems, networks or applications for weaknesses.
+
+- Nessus
+- OpenVAS
+- Qualys
+
+![[Pasted image 20260228202450.png | 400]]
+
+**Penetration Testing**: The practice of attempting to break into a system or a network to verify the systems in place.
+
+## Privacy Policy
+
+It's about overseeing the access and use of sensitive data.  
+It's a good practice to apply the principle of **least privilege** here, by not allowing access to this type of data by default.
+
+Any access that doesn't have a corresponding request should be flagged as a **high-priority potential breach** that needs to be investigate as soon as possible.
+
+**Data-handling policies** should cover the details of how different data is classified.  
+Once different data classes are defined, you should create **guidelines** around how to handle these different types of data.
+
+## User Habits
+
+You can build the world's best security systems, but they won't protect you if the users are going to be practicing **unsafe security**.
+
+You should **never upload confidential information** onto a third-party service that hasn't been evaluated by your company. It's important to **make sure employees use new and unique passwords**, and don't reuse them from other services.
+
+A much greater risk in the workplace that users should be educated on is **credential theft** from phishing emails. If someone entered their password into a phishing site, or even suspects they did, it's important to **change their password** as soon as possible.
+
+## Third-Party Security
+
+If they have subpar security, you're undermining your security defenses by potentially opening a new avenue of attack. If you can, ask for a third-party security assessment report.
+
+## Security Training
+
+Helping others keep security in mind will help decrease the security burdens you'll have as an IT support specialist.
+
+## Incident Reporting and Analysis
+
+The very first step of handling an incident is to **detect it** in the first place. The next step is to **analyze it** and **determine the effects** and scope of damage.
+
+Once the scope of the incident is determined, the next step is **containment.**
+- If an account was compromised, change the password immediately.
+- If the owner is unable to **change the password** right away, then **lock the account**
+
+**Severity** includes factors like what and how many systems were compromised, and how the breach affects business functions. The impact of an incident is also an important issue to consider.
+
+**Data exfiltration**: The unauthorized transfer of data from a computer.  
+**Recoverability**: How complicated and time-consuming the recovery effort will be.
+
+## Incident Response
+
+**Regulated data**
+1. Protected health information
+2. Credit card or payment card industry (PCI) information
+3. Personally identifiable information (PII)
+4. Federal information security management act (FISMA) compliance
+5. Export administration regulations (EAR) compliance
+
+**Digital rights management (DRM)**
+- Restrict users
+- Set expiration dates
+- Limit access
+
+**End User Licensing Agreement (EULA)** - specifying certain rights
+
+**Chain of custody** - Tracks evidence movement through its collections, safeguarding and analysis life-cycle.
+
+## Incident Response and Recovery
+
+Update firewall rules and ACLs if 
 
 
