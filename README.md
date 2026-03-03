@@ -1,4 +1,4 @@
-> Explore this live self-hosting note website: https://miniminn24/Obsidian_Notebook
+> Explore this live self-hosting note website: https://miniminn24.github.io/Obsidian_Notebook
 
 I'm self-hosting this my own knowledge base (or digital garden) to document my path from today to proficient in Cybersecurity. Here, you'll find notes from courses **Coursera**, labs and my **CTF write-ups** of **TryHackMe**, **HackTheBox** as I progress.
 
