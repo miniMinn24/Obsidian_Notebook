@@ -1,5 +1,5 @@
 ---
-date: 2026-02-24
+date: 2026-03-01
 ---
 
 **Table of Contents**
@@ -1041,6 +1041,7 @@ Helping others keep security in mind will help decrease the security burdens you
 The very first step of handling an incident is to **detect it** in the first place. The next step is to **analyze it** and **determine the effects** and scope of damage.
 
 Once the scope of the incident is determined, the next step is **containment.**
+
 - If an account was compromised, change the password immediately.
 - If the owner is unable to **change the password** right away, then **lock the account**
 
@@ -1052,6 +1053,7 @@ Once the scope of the incident is determined, the next step is **containment.**
 ## Incident Response
 
 **Regulated data**
+
 1. Protected health information
 2. Credit card or payment card industry (PCI) information
 3. Personally identifiable information (PII)
@@ -1059,6 +1061,7 @@ Once the scope of the incident is determined, the next step is **containment.**
 5. Export administration regulations (EAR) compliance
 
 **Digital rights management (DRM)**
+
 - Restrict users
 - Set expiration dates
 - Limit access
@@ -1069,6 +1072,26 @@ Once the scope of the incident is determined, the next step is **containment.**
 
 ## Incident Response and Recovery
 
-Update firewall rules and ACLs if 
+Update firewall rules and ACLs if an exposure was discovered in the course of the investigation. Create new definitions and rules for intrusion detection systems that can watch for the signs of the same attack again.
 
+**BYOD (Bring Your Own Device)** policies and solutions:
 
+- Develop BYOD policies
+- Enforce BYOD policies with MDM software
+- Distribute MDM settings to multiple OSes through EMM systems
+- Require multi-factor authentication (MFA)
+- Create acceptable use policies for company data and resources
+- Require employees to sign NDAs
+- Limit who can access data
+- Train employees on data security
+- Back up data regularly
+
+## Interview notes
+
+- Network security: disable unnecessary services and consider what are needed
+- Know what are allowed and have control on them: whitelisting software
+- network monitoring to see traffic
+- Have a different network segment to connect unknown machines
+- WPA2 encryption: stronger encryption
+- Have employees change passwords and strong. Educate them
+- Two-factor authentication: having an additional verification more than password: bio-metric, chip or key.

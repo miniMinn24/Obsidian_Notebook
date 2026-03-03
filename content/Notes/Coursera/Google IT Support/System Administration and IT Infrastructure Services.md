@@ -1,14 +1,15 @@
 ---
-title: System Administration and IT Infrastructure Services
+date: 2026-02-07
 ---
 
-## Table of Contents
+**Table of Contents**
 
-- [[#Module 1 - What is System Administration?]]
-- [[#Module 2 - Network and Infrastructure Services]]
-- [[#Module 3 - Software and Platform Services]]
-- [[#Module 4 - Directory Services]]
-- [[#Module 5 - Data Recovery & Backups]]
+- [Module 1 - What is System Administration?](#module-1---what-is-system-administration)
+- [Module 2 - Network and Infrastructure Services](#module-2---network-and-infrastructure-services)
+- [Module 3 - Software and Platform Services](#module-3---software-and-platform-services)
+- [Web Server Security Protocols](#web-server-security-protocols)
+- [Module 4 - Directory Services](#module-4---directory-services)
+- [Module 5 - Data Recovery & Backups](#module-5---data-recovery--backups)
 
 ---
 
@@ -668,6 +669,7 @@ Allows you to prioritize certain aspects of the organizations that are more at r
 - [x] Determine recovery measures
 
 ## What's a Post-Mortem?
+
 We create a **post-mortem** after an incident, an outage, or some event when something goes wrong, or at the end of a project to analyze how it went.
 
 ## Writing a Post-Mortem
@@ -677,11 +679,13 @@ To go into more details:
 ![[Pasted image 20260207144308.png]]
 
 ## Interview Role Play: Sys Admin
+
 An example of what Sys Admin interview looks like.
 **Objective:** In total, we have about 100 machines that we want to install to. Half are going to get one application and the other half is going to get another. What are some ways that we can accomplish this?
 
 **Active Directory** organizes users, groups and computer permissions to restrict certain resources in the enterprise environment. It's also used to deploy software and it's also used to control the environment.
 
 Mainly:
+
 - Asking follow-up questions
 - Defining terms
