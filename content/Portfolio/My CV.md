@@ -1,12 +1,7 @@
-
-```hblock
-![[my_character_improvement_1000x1000.jpg]] 
----
+![[my_character_improvement_1000x1000.jpg|262]]
 # Min Maung Maung
 ## Computer Science Undergraduate 
 NCC UK | Linux & Cybersecurity Enthusiast
-```
-
 ## About me
 ### Profile
 A 17-year-old first-year Computer Science student currently pursuing an NCC Diploma in Computing (UK), focused on learning the computing principles, and progressing into defensive security.
