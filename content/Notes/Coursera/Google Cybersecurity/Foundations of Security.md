@@ -65,13 +65,13 @@ The **LoveLetter** attack was an example of social engineering. Social engineeri
 
 1. **Security and Risk Management**
 	Defines security goals and objectives, risk mitigation, compliance, business continuity, and the law.  
-	> Updating company policies related to private health info if a change is made to a federal compliance regulation.
+> Updating company policies related to private health info if a change is made to a federal compliance regulation.
 2. **Asset Security**
 	Secures digital and physical assets. It's also related to the storage, maintenance, retention, and destruction of data.
-	> Make sure confidential in that old equipment is properly disposed of and destroyed.
+> Make sure confidential in that old equipment is properly disposed of and destroyed.
 3. **Security architecture and engineering**
 	Optimizes data security by ensuring effective tools, systems, and process are in place.
-	> Setting up firewalls)
+> Setting up firewalls
 4. **Communication and network security**
 	Manage and secure physical networks and wireless communications.
 > Analyse user behaviors - users connecting to unsecure network.
@@ -164,6 +164,7 @@ HIPAA is a U.S. federal law established in 1996 to protect patients' health info
 1. Privacy
 2. Security
 3. Breach notification
+
 Organizations that store patient data have a legal obligation to inform patients of a breach because if patients' **Protected Health Information** (PHI) is exposed, it can lead to identify theft and insurance fraud. PHI relates to the past, present, or future physical or mental health or condition of an individual, whether it's a plan of care or payments for care. Along with understanding HIPAA as a law, security professionals also need to be familiar with the Health Information Trust Alliance (HITRUST®), which is a security framework and assurance program that helps institutions meet HIPAA compliance.
 
 ##### International Organization for Standardization (ISO)
@@ -177,6 +178,7 @@ The American Institute of Certified Public Accountants® (AICPA) auditing standa
 - Executive
 - Vendor
 - Others
+
 They are used to assess an organization's financial compliance and levels of risk. They also cover confidentiality, privacy, integrity, availability, security, and overall data safety. Control failures in these areas can lead to fraud.  
 
 > Two suggestions to research: the **Gramm-Leach-Bliley Act** and the **Sarbanes-Oxley Act**
