@@ -22,8 +22,8 @@ Two basic parts of security:
 
 - **Operations**: Responding to detections and doing investigations
 - **Projects**: Working with other teams to build new detections or improve the current detection.
-  > [!quote] A Helpful Impact
-  > A **playbook** is a list of how to go through a certain detection, and what the analyst needs to look at in order to investigate those incidents.
+> [!quote] A Helpful Impact  
+> A **playbook** is a list of how to go through a certain detection, and what the analyst needs to look at in order to investigate those incidents.
 
 # Module 2 - The Evolution of Cybersecurity
 ## Past Cybersecurity Attacks
