@@ -1,9 +1,7 @@
 ---
 date: 2026-05-04
 ---
-![[Pasted image 20260504200821.png]]
-
-Challenge: https://blueteamlabs.online/home/challenge/follina-f1a3452f34
+> **Challenge**: https://blueteamlabs.online/home/challenge/follina-f1a3452f34
 
 > [!warning]
 > ဒီ Challenge ထဲမှာပါတဲ့ဖိုင်က တကယ့် **Malware** ပါဝင်တဲ့အတွက်ကြောင့် ကိုယ်ပိုင် VM တစ်ခုထဲမှာ Malicious ဖိုင်တွေကိုသီးသန့် Analyse လုပ်ဖို့အသိပေးပါတယ်။
