@@ -1,7 +1,7 @@
 ---
 date: 2026-05-04
 ---
-#easy #defensive
+![[Pasted image 20260504200821.png]]
 
 Challenge: https://blueteamlabs.online/home/challenge/follina-f1a3452f34
 
@@ -84,7 +84,7 @@ Output မှာ `document.xml.rels` ဆိုတဲ့ XML ဖိုင်က M
 # Question 5
 > The extracted URL accesses a HTML file that triggers the vulnerability to execute a malicious payload. According to the HTML processing functions, any files with fewer than `<Number>` bytes would not invoke the payload. Submit the `<Number>` (Format: Number of Bytes)
 
-sample.doc ကသုံးသွားတဲ့ command  တွေမသိရတော့ ကျွန်တော် Report တွေလိုက်ရှာဖတ်၊ PoC (Proof Of Concept) လိုက်ကြည့်ရင်းနဲ့မှ Question 5, [[#Question 6]], 7 ရဲ့အဖြေတွေကိုရှာတွေ့ခဲ့ပါတယ်။  
+sample.doc မှာသုံးသွားတဲ့ command  တွေကိုမသိရတော့ ကျွန်တော် Report တွေလိုက်ရှာဖတ်၊ PoC (Proof Of Concept) လိုက်ကြည့်ရင်းနဲ့မှ [[#Question 5]], [[#Question 6]], [[#Question 7]] တို့ရဲ့အဖြေတွေကိုရှာတွေ့ခဲ့ပါတယ်။  
 
 ပြောရမယ်ဆိုရင် Follina (CVE-2022-30190) မှာတုန်းက Microsoft ရဲ့ HTML Processing function ထဲမှာ **Hardcoded** buffer size ရှိခဲ့ပါတယ်။ ဘယ်ဖိုင်ပဲဖြစ်ဖြစ် 4096 bytes ထက်နည်းနေရင် payload ကအသက်ဝင်မနိုင်ကြောင်း ဒီ [Report](https://www.huntress.com/blog/microsoft-office-remote-code-execution-follina-msdt-bug?source=post_page-----13efe22e80e4---------------------------------------#:~:text=After%20some%20testing,the%20payload.)  မှာအတည်ပြုခဲ့ပါတယ်။
 
@@ -134,5 +134,5 @@ Execution ရဲ့ Method က **T1059** ဆိုတာ ကျွန်တေ�
 # Question 9
 > Submit the CVE associated with the vulnerability that is being exploited (Format: CVE-XXXX-XXXXX)
 
- ကျွန်တော်တို့ဒီ CVE အကြောင်းကို VirusTotal မှာတင်တွေ့ခဲ့ပြီးသားဖြစ်ပါတယ်။
+ ကျွန်တော်တို့ CVE အချက်အလက်ကို VirusTotal မှာစစ်ခဲ့ပြီးသားဖြစ်ပါတယ်။
 ![[Pasted image 20260504194414.png]]
