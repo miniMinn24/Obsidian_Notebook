@@ -8,7 +8,7 @@ date: 2026-05-05
 
 ![[Pasted image 20260505150521.png]]
 
-### Things I love about Performance & Flexibility
+### My thoughts on KVM as a VBox user
 
 KVM က Type-1 Hypervisor ဖြစ်တာကြောင့် Kernel-level ပေါ်မှာတိုက်ရိုက်လည်ပတ်တာဖြစ်ပါတယ်။ တခြား Host OS ရဲ့ပေါ်ဆုံးမှာ Application အဖြစ် run နေတဲ့ Type-2 Hypervisor (VirtualBox၊ VMware Workstation) တို့နဲ့ယှဥ်လိုက်ရင် KVM ကပိုပြီး Bare-Metal နီးပါး Efficiency ကိုရရှိစေနိုင်ပါတယ်။ ဒါကြောင့်ကိုယ်တိုင် Cybersecurity (Malware analysis | SOC Labs) လုပ်တဲ့အပိုင်းတွေအခါကျ Resource-intensive tools တွေတပြိုင်နက်အသုံးပြုတဲ့အခါ မလေးတော့ပါဘူး။
 
@@ -209,32 +209,37 @@ $ mv -r Parrot-spin-htb-7.1_amd64.iso /var/lib/libvirt/images/
 ```
 
 1. Click **File > New Virtual Machine**:
+
    ![[Pasted image 20260505205032.png]]
+
 2. Choose your **installation source - Local install media (ISO) > Forward**:
+
    ![[Pasted image 20260505205221.png]]
    ![[Pasted image 20260505210034.png]]
 
 3. Linux ISO file ကဘာ Distro အမျိုးအစားလည်း Detect မဖြစ်ဘူးဆိုတော့ ကိုယ်တိုင် Manually ရွေးလိုက်ပါတယ်။ Parrot OS က Debian based ဆိုတော့ **Debian 11** ထားလိုက်လည်းရပါတယ်။
+
    ![[Pasted image 20260505210354.png]]
+
 4. Set memory and CPU allocation. **2048 MB RAM** and **2 vCPUs** ဆိုရင်အဆင်ပြေပါတယ်။
+
    ![[Pasted image 20260505210813.png]]
 
 > ဒါပေမယ့် ဒီ Parrot OS HTB Edition က **minimum 4GB** ရှိမှ Installation လုပ်တဲ့အခါ Feature စုံမယ်လို့ပြောပါတယ်။ ဒါကြောင့်လောလောဆယ် 4 GB RAM ပေးထားလိုက်ပြီး Installation ပြီးမှ VM setting ထဲမှာ 2 GB သွားပြန်ပြောင်းလည်းအဆင်ပြေပါတယ်။
 
 5. Virtual disk အတွက် 20-40 GB တည်းနဲ့ Linux အတွက်အဆင်ပြေနိုင်ပါတယ်။ Windows ဆိုရင်တော့ 50+ GB ပေါ့။
-![[Pasted image 20260505211124.png]]
+
+   ![[Pasted image 20260505211124.png]]
 
 6. အားလုံးပြီးပြီဆိုတော့ VM ပေါ်မှာ Installation စတင်နိုင်ပါပြီ။
-![[Pasted image 20260505211353.png]]
 
-ဒီကနေဆက်ပြီးတော့ ကိုယ်တိုင် Parrot OS တင်ပြီးသွားရင် Labs တွေလေ့ကျင့်ဖို့ပဲဖြစ်ဖြစ်၊ Malware analysis၊ Blue Team workflows တွေကို VirtualBox၊ VMware workstation တို့ထက်ပိုမြန်ဆန်တဲ့ KVM ရဲ့ Kernel level efficiency ကိုအသုံးချရင်းစိတ်ကြိုက်စမ်းနိုင်ပါပြီခင်ဗျာ။ 
+   ![[Pasted image 20260505211353.png]]
+
+ဒီကနေဆက်ပြီးတော့ ကိုယ်တိုင် Parrot OS တင်ပြီးသွားရင် Labs တွေလေ့ကျင့်ဖို့ပဲဖြစ်ဖြစ်၊ Malware analysis၊ Blue Team workflows တွေကို VirtualBox၊ VMware workstation တို့ထက်ပိုမြန်ဆန်တဲ့ KVM ရဲ့ Kernel level efficiency ကိုအသုံးချရင်းစိတ်ကြိုက်စမ်းနိုင်ပါပြီခင်ဗျာ။
 
 ![[2026-05-02-203505_hyprshot.png]]
 
 ---
-> [!info]  Thanks for reading! 
+
+> [!info] Thanks for reading!
 > ဒီ Blog နဲ့ပတ်သက်ပြီး Feedbacks၊ Troubleshooting၊ Mistakes ထောက်ပြစရာတွေရှိရင် ဒီ Blog ကို Share ခဲ့တဲ့ Social Platforms မှာ Comment ချပေးနိုင်ပါတယ်ခင်ဗျာ။ ကိုယ်တိုင်လည်းအကောင်းဆုံးကြိုးစားရင်း လေ့လာသွားပါမယ်ခင်ဗျာ။
-
-
-
-
