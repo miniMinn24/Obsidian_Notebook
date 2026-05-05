@@ -9,6 +9,7 @@ date: 2026-05-05
 ![[Pasted image 20260505150521.png]]
 
 ### My thoughts on KVM as a VBox user
+VBox က Arch Linux အတွက် Compatibility အတွက်ကောင်းပေမယ့် Performance issue တွေဆက်တိုက်ကြုံခဲ့ရင်းကနေ အခုတလော KVM ကိုစမ်းဖြစ်သွားတာ။ သူ့ရဲ့ Minimalist ပေါ့ပါးပုံ၊ Performance မြန်ပုံကြောင့် KVM ကိုတော်တော်လေးသဘောကျသွားလို့ ဒီ Guide လေးချက်ချင်းဆိုသလို ရေးလိုက်တာပေါ့။  
 
 KVM က Type-1 Hypervisor ဖြစ်တာကြောင့် Kernel-level ပေါ်မှာတိုက်ရိုက်လည်ပတ်တာဖြစ်ပါတယ်။ တခြား Host OS ရဲ့ပေါ်ဆုံးမှာ Application အဖြစ် run နေတဲ့ Type-2 Hypervisor (VirtualBox၊ VMware Workstation) တို့နဲ့ယှဥ်လိုက်ရင် KVM ကပိုပြီး Bare-Metal နီးပါး Efficiency ကိုရရှိစေနိုင်ပါတယ်။ ဒါကြောင့်ကိုယ်တိုင် Cybersecurity (Malware analysis | SOC Labs) လုပ်တဲ့အပိုင်းတွေအခါကျ Resource-intensive tools တွေတပြိုင်နက်အသုံးပြုတဲ့အခါ မလေးတော့ပါဘူး။
 
