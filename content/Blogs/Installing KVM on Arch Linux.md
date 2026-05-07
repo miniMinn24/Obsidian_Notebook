@@ -1,7 +1,6 @@
 ---
 date: 2026-05-05
 ---
-
 # Introduction
 
 **KVM** ဆိုတဲ့ Kernel-based Virtual Machine ကကျွန်တော်တို့ Arch Linux ပေါ်မှာပိုမြန်ဆန်တဲ့ Type-1 Hypervisor အဖြစ်အသုံးပြုလို့ရအောင် လုပ်ပေးပါတယ်။ သူကလုံးဝ Free & Open-source၊ x86 hardware သီးသန့်ဖြစ်ပါတယ်။ ဒါပေမယ့် Setup နည်းက Arch based distro တွေပေါ်မှာတခြားသာမန်နည်းတွေနဲ့မတူတော့ ဒီ Guide လေးမှာ နားလည်ရလွယ်အောင်ရေးသားလိုက်ပါတယ်။

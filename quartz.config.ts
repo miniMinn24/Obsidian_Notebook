@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "☕.md",
+    pageTitle: "miniMinn.md",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -34,14 +34,14 @@ const config: QuartzConfig = {
           gray: "#b8b8b8",
           darkgray: "#4e4e4e",
           dark: "#2b2b2b",
-          secondary: "#03121c",
+          secondary: "#00081c",
           tertiary: "#4d5c7e",
           highlight: "rgba(143, 159, 169, 0.15)",
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#1c1c23",
-          lightgray: "#20212a",
+          light: "#00081c",
+          lightgray: "#010508",
           gray: "#646464",
           darkgray: "#d4d4d4",
           dark: "#ebebec",

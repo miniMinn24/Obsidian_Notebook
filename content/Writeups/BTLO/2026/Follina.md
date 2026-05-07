@@ -7,7 +7,7 @@ date: 2026-05-04
 > ဒီ Challenge ထဲမှာပါတဲ့ဖိုင်က တကယ့် **Malware** ပါဝင်တဲ့အတွက်ကြောင့် ကိုယ်ပိုင် VM တစ်ခုထဲမှာ Malicious ဖိုင်တွေကိုသီးသန့် Analyse လုပ်ဖို့အသိပေးပါတယ်။
 
 > [!quote] Scenario
-> On a Friday evening when you were in a mood to celebrate your weekend, your team was alerted with a new RCE vulnerability actively being exploited in the wild. You have been tasked with analyzing and researching the sample to collect information for the weekend team.
+> *On a Friday evening when you were in a mood to celebrate your weekend, your team was alerted with a new RCE vulnerability actively being exploited in the wild. You have been tasked with analyzing and researching the sample to collect information for the weekend team.*
 
 ### Tools
 - [VirusTotal](https://www.virustotal.com/gui/home/upload) - Analyse suspicious files
