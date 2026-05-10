@@ -89,6 +89,7 @@ Packet တွေအများကြီးတွေ့ထဲမှာမှ ဆ
 
 # Q-7. What is the parameter used in the web shell for executing commands?
 
+
 `dbfunction.php` အောက်က info တွေကိုဆက်ကြည့်မယ်ဆိုရင် `cmd` ဆိုတဲ့ parameter ကိုသုံးပြီး shell တည်ဆောက်ဖို့အတွက်ပါဝင်တဲ့ php code တွေကိုမြင်ရနိုင်ပါတယ်။
 
 ```php

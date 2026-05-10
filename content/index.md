@@ -8,14 +8,15 @@ date: 2026-01-21
 This is about how I progressed through trial-and-errors.
 
 ### Blue Team Labs Online
-1. [[Notebook/Writeups/BTLO/2026/Follina|Follina]]
-2. [[Network Analysis - Web Shell]]
-3. [[Log Analysis - Privilege Escalation]]
+1. [[The Planet's Prestige]]
+2. [[Log Analysis - Privilege Escalation]]
+3. [[Network Analysis - Web Shell]]
+4. [[Follina]]
 
 ### TryHackMe
-1. [[Notebook/Writeups/TryHackMe/2026/Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]
+1. [[Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]
 ### HackTheBox
-1. [[Notebook/Writeups/HackTheBox/2026/CTF Try Out|CTF Try Out]]
+1. [[CTF Try Out|CTF Try Out]]
 
 # Course Walkthroughs
 See my professional course notes while I study.
