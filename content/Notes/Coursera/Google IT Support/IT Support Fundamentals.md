@@ -1,20 +1,24 @@
 ---
 date: 2025-07-23
+tags:
+  - itsupport
+  - course
+  - systems
 ---
-
 **Table of Contents**
 
-- [Modules 1 - Introduction](#modules-1---introduction)
-- [Module 2 - Hardware](#module-2---hardware)
-- [Module 3 - OS](#module-3---os)
-- [Module 4 - Networking](#module-4---networking)
-- [Module 5 - Software](#module-5---software)
-- [Module 6 - Troubleshooting](#module-6---troubleshooting)
-- [Technical Interview](#technical-interview)
+1. [Module 1 - Introduction](#module-1---introduction)
+2. [Module 2 - Hardware](#module-2---hardware)
+3. [Module 3 - OS](#module-3---os)
+4. [Module 4 - Networking](#module-4---networking)
+5. [Module 5 - Software](#module-5---software)
+6. [Module 6 - Troubleshooting](#module-6---troubleshooting)
+7. [Technical Interview](#technical-interview)
+
 
 ---
 
-# Modules 1 - Introduction
+# Module 1 - Introduction
 
 IT support mindset - computing technology, it's about people
 
@@ -247,3 +251,12 @@ Be prepared to explain a concept when you choose over another. Take notes, break
 - Also an opportunity to ask the interviewer to ask for things you care about.
 
 In secnarios -- <mark style="background: #D2B3FFA6;">get the pirorities right.</mark>
+
+---
+**Courses of Google IT Support Professional**
+
+1. (**Current**): [[/Notes/Coursera/Google IT Support/IT Support Fundamentals|IT Support Fundamentals]]
+2. [[/Notes/Coursera/Google IT Support/The Bits and Bytes of Computer Networking|The Bits and Bytes of Computer Networking]] .
+3. [[Notes/Coursera/Google IT Support/Operating Systems and You - Becoming a Power User|Operating Systems and You - Becoming a Power User]]
+4. [[/Notes/Coursera/Google IT Support/System Administration and IT Infrastructure Services|System Administration and IT Infrastructure Services]]
+5. [[/Notes/Coursera/Google IT Support/IT Security - Defense against the digital dark arts|IT Security - Defense against the digital dark arts]]

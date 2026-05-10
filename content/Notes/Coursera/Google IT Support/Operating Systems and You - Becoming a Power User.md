@@ -1,5 +1,10 @@
 ---
 date: 2025-10-30
+tags:
+  - itsupport
+  - course
+  - Linux
+  - windows
 ---
 
 **Table of Contents**
@@ -892,3 +897,13 @@ Execute the software with `eventvmr.msc`.
 - Is the problem unique to one computer or all computers on the network?
 - Does the problem affect a single user or all users?
 - Is the problem related to a particular application? Is that application up-to-date?
+
+---
+
+**Courses of Google IT Support Professional**
+
+1. [[/Notes/Coursera/Google IT Support/IT Support Fundamentals|IT Support Fundamentals]]
+2. [[/Notes/Coursera/Google IT Support/The Bits and Bytes of Computer Networking|The Bits and Bytes of Computer Networking]]
+3. (**Current**): [[Notes/Coursera/Google IT Support/Operating Systems and You - Becoming a Power User|Operating Systems and You - Becoming a Power User]]
+4. [[/Notes/Coursera/Google IT Support/System Administration and IT Infrastructure Services|System Administration and IT Infrastructure Services]]
+5. [[/Notes/Coursera/Google IT Support/IT Security - Defense against the digital dark arts|IT Security - Defense against the digital dark arts]]

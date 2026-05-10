@@ -1,11 +1,18 @@
 ---
 date: 2026-01-22
 tags:
-  - htb
-  - writeup
   - ctf
-  - event
-  - Linux
+  - htb
+  - challenges
+---
+
+**Table of Contents**
+
+1. [Hardware Challenges](#hardware-challenges)
+2. [ICS (Industrial Control System) Challenges](#ics-industrial-control-system-challenges)
+3. [Reversing Challenges](#reversing-challenges)
+4. [Web Challenges](#web-challenges)
+
 ---
 
 ## Introduction

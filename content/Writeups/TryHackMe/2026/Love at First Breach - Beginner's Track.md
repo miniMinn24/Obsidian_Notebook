@@ -4,7 +4,7 @@ tags:
   - "#ctf"
   - "#event"
   - "#valentine"
-  - "#redteam"
+  - offensive
 ---
 > **Special thanks** to [TryHackMe](https://tryhackme.com) and the community for hosting such fun, hands-on learning rooms and for the helpful hints when I got stuck  💖☕
 

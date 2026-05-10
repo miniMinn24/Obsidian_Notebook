@@ -1,3 +1,11 @@
+---
+date: 2025-09-25
+tags:
+  - networking
+  - project
+  - nas
+  - casaos
+---
 # Turning an Old Router into an Access Point: Extending My Home Wi-Fi
 
 Don’t throw your **Old Router** away just yet, if you have one!

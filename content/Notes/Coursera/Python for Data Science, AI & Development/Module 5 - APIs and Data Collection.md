@@ -1,3 +1,10 @@
+---
+tags:
+  - python
+  - course
+  - api
+---
+
 # Module 5: APIs and Data Collection
 ## Simple APIs
 APIs are just like functions, no need to know how it works, just only input and output. An essential type of API is **REST API** that application programs use it access resources via internet.

@@ -1,6 +1,12 @@
 ---
 date: 2026-03-05
+tags:
+  - cybersecurity
+  - course
+  - concepts
 ---
+This is the **first introduction course** of [[/Notes/Coursera/Google-Cybersecurity|Google Cybersecurity]]. You can view the next course here: [[/Notes/Coursera/Google Cybersecurity/Play It Safe - Manage Security Risks|Play It Safe - Manage Security Risks]].
+
 **Table of Contents**
 
 1. [Module 1 - Foundations of Cybersecurity](#module-1---foundations-of-cybersecurity)

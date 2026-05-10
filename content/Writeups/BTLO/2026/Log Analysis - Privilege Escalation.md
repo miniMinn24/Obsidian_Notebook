@@ -1,9 +1,9 @@
 ---
 date: 2026-05-07
 tags:
-  - easy
   - challenge
-  - ctf-like
+  - defensive
+  - logs
 ---
 > [!quote] Challenge's Scenario
 > **Link to the [challenge](https://blueteamlabs.online/home/challenge/log-analysis-privilege-escalation-65ffe8df12)**

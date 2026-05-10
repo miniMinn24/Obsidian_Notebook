@@ -2,7 +2,6 @@
 date: 2026-05-02
 tags:
   - defensive
-  - blueteam
   - wireshark
 ---
 ```

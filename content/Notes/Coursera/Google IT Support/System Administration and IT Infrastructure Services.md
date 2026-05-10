@@ -1,7 +1,10 @@
 ---
 date: 2026-02-07
+tags:
+  - itsupport
+  - course
+  - sysadmin
 ---
-
 **Table of Contents**
 
 - [Module 1 - What is System Administration?](#module-1---what-is-system-administration)
@@ -689,3 +692,12 @@ Mainly:
 
 - Asking follow-up questions
 - Defining terms
+
+---
+**Courses of Google IT Support Professional**
+
+1. [[/Notes/Coursera/Google IT Support/IT Support Fundamentals|IT Support Fundamentals]]
+2. [[/Notes/Coursera/Google IT Support/The Bits and Bytes of Computer Networking|The Bits and Bytes of Computer Networking]]
+3. [[Notes/Coursera/Google IT Support/Operating Systems and You - Becoming a Power User|Operating Systems and You - Becoming a Power User]]
+4. (**Current**): [[/Notes/Coursera/Google IT Support/System Administration and IT Infrastructure Services|System Administration and IT Infrastructure Services]]
+5. [[/Notes/Coursera/Google IT Support/IT Security - Defense against the digital dark arts|IT Security - Defense against the digital dark arts]]

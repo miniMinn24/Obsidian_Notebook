@@ -1,5 +1,10 @@
 ---
 date: 2026-05-04
+tags:
+  - challenge
+  - defensive
+  - follina
+  - malware
 ---
 > **Challenge**: https://blueteamlabs.online/home/challenge/follina-f1a3452f34
 

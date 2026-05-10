@@ -1,5 +1,11 @@
 ---
 date: 2026-02-22
+tags:
+  - course
+  - defensive
+  - forensic
+  - wazuh
+  - investigation
 ---
 
 > [!tip] Introduction

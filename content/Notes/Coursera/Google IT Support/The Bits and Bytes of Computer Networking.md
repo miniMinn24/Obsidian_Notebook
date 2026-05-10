@@ -1,7 +1,12 @@
 ---
 title: The Bits and Bytes of Computer Networking
+tags:
+  - itsupport
+  - course
+  - networking
 ---
-## Table of Contents
+**Table of Contents**
+
 - [[#Module 1 - Introduction to Networking]]
 - [[#Module 2 - The Network Layer]]
 - [[#Module 3 - The Transport and Application Layers]]
@@ -969,3 +974,11 @@ Before fixing things, make sure you what excatly the problem.
 > **DHCP** is Dynamic Host Configuration Protocol automatically assigns IP addresses to computing devices, and it can also send network configurations, too. It'd be important because if the IP address is getting assigned statically, then we have to go in and change it, but it should be getting assigned automatically.
 > DHCP can be configured incorrectly or you could be connected to the wrong network.
 
+---
+**Courses of Google IT Support Professional**
+
+1. [[/Notes/Coursera/Google IT Support/IT Support Fundamentals|IT Support Fundamentals]]
+2. (**Current**): [[/Notes/Coursera/Google IT Support/The Bits and Bytes of Computer Networking|The Bits and Bytes of Computer Networking]]
+3. [[Notes/Coursera/Google IT Support/Operating Systems and You - Becoming a Power User|Operating Systems and You - Becoming a Power User]]
+4. [[/Notes/Coursera/Google IT Support/System Administration and IT Infrastructure Services|System Administration and IT Infrastructure Services]]
+5. [[/Notes/Coursera/Google IT Support/IT Security - Defense against the digital dark arts|IT Security - Defense against the digital dark arts]]

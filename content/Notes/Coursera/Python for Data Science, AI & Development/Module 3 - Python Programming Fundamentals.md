@@ -1,4 +1,10 @@
-# Module 3: Python Programming Fundamentals
+---
+tags:
+  - python
+  - course
+  - fundamentals
+---
+
 
 ## Conditions and Branching
 About logical comparisons `>, <, ==, !=, >=, <=...` and logic gates `AND, OR, NAND...`

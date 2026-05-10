@@ -1,36 +1,42 @@
 ---
-title: Knowledge Base! ˙𐃷 ˙
+title: Knowledge Base
 date: 2026-01-21
 ---
-I'm self-hosting this my own knowledge base (or digital garden) to document my path from today to proficient in Cybersecurity. Here, you'll find notes from courses **Coursera**, labs and my **CTF write-ups** of **TryHackMe**, **HackTheBox** as I progress.
+**As a part of my portfolio**, I'm self-hosting this as my own knowledge base (a digital garden) to document my path from today to proficient in Cybersecurity. I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups, so I can prove through real works.
 
-_My own technical contents and thoughts will be shared also._
+# Writeups
+This is about how I progressed through trial-and-errors.
 
-## Writeups
+### Blue Team Labs Online
+1. [[Notebook/Writeups/BTLO/2026/Follina|Follina]]
+2. [[Network Analysis - Web Shell]]
+3. [[Log Analysis - Privilege Escalation]]
 
-My comprehensive writeups that you can freely read as I progress further in practicing hands-on cyber labs:
+### TryHackMe
+1. [[Notebook/Writeups/TryHackMe/2026/Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]
+### HackTheBox
+1. [[Notebook/Writeups/HackTheBox/2026/CTF Try Out|CTF Try Out]]
 
-- [[/Writeups/TryHackMe]] ☕📓
-- [[/Writeups/HackTheBox]] 💻📗
+# Course Walkthroughs
+See my professional course notes while I study.
 
-## Course Notes
-See my professional course notes from 0 to hero in cybersecurity journey while I study:
+- [[/Notes/Coursera/Google-IT-Support/]]
+- [[/Notes/Cyberwarfare Labs/(BTF) Blue Team Fundamentals|(BTF) Blue Team Fundamentals]]
+- [[/Notes/Coursera/Google-Cybersecurity]]
+- [[/Notes/Coursera/Python for Data Science, AI & Development]]
+- [[/Notes/Coursera/Mathematics for CS/Notes]]
 
-| Learning                                                  | Platform | Status                                                  |
-| --------------------------------------------------------- | -------- | ------------------------------------------------------- |
-| [[/Notes/Coursera/Google-IT-Support/]]                    | Coursera | <mark style="background: #BBFABBA6;">Completed</mark>   |
-| [[/Notes/Cyberwarfare-Labs/Blue-Team-Fundamentals-(BTF)]] | CWL      | <mark style="background: #BBFABBA6;">Completed</mark>   |
-| [[/Notes/Coursera/Google-Cybersecurity]]                  | Coursera | <mark style="background: #FFF3A3A6;">In Progress</mark> |
+# My Blogs
+My thoughts, guides and blogs that can help you for your area of interests.
+- [[Installing KVM on Arch Linux]]
+- [[/Blogs/Old Router as Wifi Extender|Old Router as Wifi Extender]]
 
-## What I'm working on
+---
 
-- **Learning Notes**: Summaries and key takeaways from invaluable courses.
-- **Lab Walkthroughs**: My experiences and guides to solve lab challenges.
-- **Blogs & Contents**: Deep dives into security tools, techniques, and theory.
-
-> [!INFO] How am I hosting this?
-> I love taking all my notes with **[Obsidian](https://obsidian.md)**, which I always use everyday on my Linux and I self-host this website with **[Quartz](https://quartz.jzhao.xyz)** on **GitHub**.
+> [!INFO] How/Why am I hosting this?
+> I love writing notes in **[Obsidian](https://obsidian.md)**, which I always use it everyday on my Linux and I won't have to go to online platforms just to write something. That really helped me to organize every contents in one place.
+>  I'm self-hosting this static website with **[Quartz](https://quartz.jzhao.xyz)** on **GitHub** to make it publicly accessible. It is a plugin that is specifically designed for Obsidian to convert `.md` files into web page.
 >
 > - _They're all open-source and offers full cuztomization!_
 
-Have questions or feedback? Connect me via [GitHub](https://github.com/miniMinn24) or [LinkedIn](https://www.linkedin.com/in/min-maung-maung-03352028a/).
+Have questions or feedbacks? Connect me via [GitHub](https://github.com/miniMinn24) or [LinkedIn](https://www.linkedin.com/in/min-maung-maung-03352028a/).

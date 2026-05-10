@@ -1,4 +1,10 @@
-# Module 2: Python Data Structures
+---
+tags:
+  - python
+  - course
+  - datastructure
+---
+
 
 ## About Lists and Tuples
 A basic data structure and the methods commonly used in Python.

@@ -1,3 +1,10 @@
+---
+tags:
+  - mathematics
+  - computerscience
+---
+
+
 # Mathematics for Computer Science
 The key concepts of sequences, series, and the principle of mathematical induction taught by **Coursera**.
 

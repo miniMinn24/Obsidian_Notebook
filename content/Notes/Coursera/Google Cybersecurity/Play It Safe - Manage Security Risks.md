@@ -1,6 +1,12 @@
 ---
 date: 2026-04-30
+tags:
+  - cybersecurity
+  - course
+  - riskassessment
 ---
+This is the **second course** of [[/Notes/Coursera/Google-Cybersecurity|Google Cybersecurity Professional]]. We previously the learned introduction here [[/Notes/Coursera/Google Cybersecurity/Foundations of Security|Foundations of Security]].
+
 **Table of Contents**
 
 1. [Module 1 - Security domains](#module-1---security-domains)

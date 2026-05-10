@@ -1,7 +1,10 @@
 ---
 date: 2026-03-01
+tags:
+  - itsupport
+  - course
+  - cybersecurity
 ---
-
 **Table of Contents**
 
 - [Module 1 - Understanding Security Threats](#module-1---understanding-security-threats)
@@ -1095,3 +1098,11 @@ Update firewall rules and ACLs if an exposure was discovered in the course of th
 - WPA2 encryption: stronger encryption
 - Have employees change passwords and strong. Educate them
 - Two-factor authentication: having an additional verification more than password: bio-metric, chip or key.
+
+---
+**Courses of Google IT Support Professional**
+1. [[/Notes/Coursera/Google IT Support/IT Support Fundamentals|IT Support Fundamentals]]
+2. [[/Notes/Coursera/Google IT Support/The Bits and Bytes of Computer Networking|The Bits and Bytes of Computer Networking]]
+3. [[Notes/Coursera/Google IT Support/Operating Systems and You - Becoming a Power User|Operating Systems and You - Becoming a Power User]]
+4. [[/Notes/Coursera/Google IT Support/System Administration and IT Infrastructure Services|System Administration and IT Infrastructure Services]]
+5. (**Current**): [[/Notes/Coursera/Google IT Support/IT Security - Defense against the digital dark arts|IT Security - Defense against the digital dark arts]]

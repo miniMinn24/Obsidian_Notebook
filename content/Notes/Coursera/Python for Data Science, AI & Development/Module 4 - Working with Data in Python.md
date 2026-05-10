@@ -1,3 +1,10 @@
+---
+tags:
+  - python
+  - io
+  - course
+---
+
 # Module 4: Working with Data in Python
 ## Reading and Writing Files with `Open`
 Python's `open` function creates an object and access to data within the text file.
