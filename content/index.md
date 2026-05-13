@@ -5,7 +5,7 @@ date: 2026-01-21
 **As a part of my portfolio**, I'm self-hosting this as my own knowledge base (a digital garden) to document my path from today to proficient in Cybersecurity. I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups, so I can prove through real works.
 
 # Writeups
-This is about how I progressed through trial-and-errors.
+Documenting my cybersecurity lab progresses through trial-and-errors.
 
 ### Blue Team Labs Online
 1. [[Employee of the Year]]
@@ -22,16 +22,18 @@ This is about how I progressed through trial-and-errors.
 # Course Walkthroughs
 See my professional course notes while I study.
 
-- [[/Notes/Coursera/Google-IT-Support/]]
-- [[/Notes/Cyberwarfare Labs/(BTF) Blue Team Fundamentals|(BTF) Blue Team Fundamentals]]
-- [[/Notes/Coursera/Google-Cybersecurity]]
-- [[/Notes/Coursera/Python for Data Science, AI & Development]]
-- [[/Notes/Coursera/Mathematics for CS/Notes]]
+1. [[/Notes/Coursera/Google-IT-Support/]]
+2. [[/Notes/Cyberwarfare Labs/(BTF) Blue Team Fundamentals|(BTF) Blue Team Fundamentals]]
+3. [[/Notes/Coursera/Google-Cybersecurity]]
+4. [[/Notes/Coursera/Python for Data Science, AI & Development]]
+5. [[/Notes/Coursera/Mathematics for CS/Notes]]
 
 # My Blogs
-My thoughts, guides and blogs that can help you for your area of interests.
-- [[Installing KVM on Arch Linux]]
-- [[/Blogs/Old Router as Wifi Extender|Old Router as Wifi Extender]]
+My tutorials, guides and blogs that can help for your IT career development.
+
+1. [[How to install Guest Drivers (For Windows in KVM)]]
+2. [[Installing KVM on Arch Linux]]
+3. [[/Blogs/Old Router as Wifi Extender|Old Router as Wifi Extender]]
 
 ---
 
