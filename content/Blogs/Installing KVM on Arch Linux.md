@@ -243,6 +243,9 @@ $ mv -r Parrot-spin-htb-7.1_amd64.iso /var/lib/libvirt/images/
 
 ![[2026-05-02-203505_hyprshot.png]]
 
+
+KVM ထဲမှာ Windows တင်မယ့်သူများအတွက် Windows 10/11 တင်ပြီးရင်လုပ်ရမယ့် [[How to install Guest Drivers (For Windows in KVM)]] ဝင်ဖတ်နိုင်ပါတယ်ခင်ဗျာ။ 
+
 ---
 
 > [!info] Thanks for reading!
