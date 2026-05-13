@@ -8,10 +8,11 @@ date: 2026-01-21
 This is about how I progressed through trial-and-errors.
 
 ### Blue Team Labs Online
-1. [[The Planet's Prestige]]
-2. [[Log Analysis - Privilege Escalation]]
-3. [[Network Analysis - Web Shell]]
-4. [[Follina]]
+1. [[Employee of the Year]]
+2. [[The Planet's Prestige]]
+3. [[Log Analysis - Privilege Escalation]]
+4. [[Network Analysis - Web Shell]]
+5. [[Follina]]
 
 ### TryHackMe
 1. [[Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]

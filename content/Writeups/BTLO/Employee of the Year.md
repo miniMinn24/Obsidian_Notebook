@@ -11,6 +11,13 @@ tags:
 > John received the 'Best Employee of the Year' award for his hard work at FakeCompany Ltd. Unfortunately, today John deleted some important files (typical John!). It’s your job to recover the deleted files and capture all the flags contained within!
 > 
 
+# Tools Used
+- [PhotoRec](https://www.cgsecurity.org/wiki/photoRec) to recover deleted contents by the collection of raw bytes.
+- [Kwrite](https://apps.kde.org/kwrite/) to view text files and understand content structures.
+- [CyberChef](https://gchq.github.io/CyberChef/) to decode hidden messages.
+- [Typst](https://typst.app/tools/ascii-table/) to convert hex into ASCII.
+- [TheSleuthKit](https://www.sleuthkit.org/) for analyzing disk images and recovering files.
+
 ## Q-1. What is the text written on the recovered gif image?
 
 ပထမဆုံးအနေနဲ့ recoverfiles.dd ထဲကဖိုင်တွေကိုပြန်ဆယ်ဖို့အတွက် PhotoRec ကိုအသုံးပြုခဲ့ပါတယ်။ 
@@ -120,11 +127,4 @@ r/r * 16:	Flag1.png
 V/V 2305:	$OrphanFiles
 ```
 
----
-# Conclusion 
-## Tools Used
-- [#PhotoRec](https://www.cgsecurity.org/wiki/photoRec) to recover deleted contents by the collection of raw bytes.
-- [#Kwrite](https://apps.kde.org/kwrite/) to view text files and understand content structures.
-- [#CyberChef](https://gchq.github.io/CyberChef/) to decode hidden messages.
-- [#Typst](https://typst.app/tools/ascii-table/) to convert hex into ASCII.
-- [#TheSleuthKit](https://www.sleuthkit.org/) for analyzing disk images and recovering files.
+
