@@ -5,6 +5,8 @@ tags:
   - kvm
   - windows
 ---
+![[Pasted image 20260514002201.png]]
+
 # Introduction
 
 KVM ထဲမှာ Windows 10/11 တင်ပြီးသွားတဲ့သူတွေအတွက် Guest Drivers လေးတွေသီးသန့်သွင်းပေးလိုအပ်ပါလိမ့်မယ်၊ ဒါမှ copy & paste၊ drag & drop၊ performance အတွက်လိုအပ်တဲ့ feature တွေချောချောမွေ့မွေ့အသုံးပြုနိုင်မှာဖြစ်ပါတယ်ခင်ဗျာ။
