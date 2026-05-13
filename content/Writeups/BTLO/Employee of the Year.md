@@ -18,6 +18,8 @@ tags:
 - [Typst](https://typst.app/tools/ascii-table/) to convert hex into ASCII.
 - [TheSleuthKit](https://www.sleuthkit.org/) for analyzing disk images and recovering files.
 
+# Questions & Answers
+
 ## Q-1. What is the text written on the recovered gif image?
 
 ပထမဆုံးအနေနဲ့ recoverfiles.dd ထဲကဖိုင်တွေကိုပြန်ဆယ်ဖို့အတွက် PhotoRec ကိုအသုံးပြုခဲ့ပါတယ်။ 
