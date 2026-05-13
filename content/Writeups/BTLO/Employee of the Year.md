@@ -25,6 +25,7 @@ tags:
 ပထမဆုံးအနေနဲ့ recoverfiles.dd ထဲကဖိုင်တွေကိုပြန်ဆယ်ဖို့အတွက် PhotoRec ကိုအသုံးပြုခဲ့ပါတယ်။ 
 
 1. Selecting a media > Proceed:
+
 ![[Pasted image 20260511231539.png]]
 
 2. Select partition > Linux > Search:
