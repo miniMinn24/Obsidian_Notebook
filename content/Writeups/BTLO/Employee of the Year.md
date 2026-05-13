@@ -112,7 +112,7 @@ File System Type: Ext4
 
 ## Q-6. What is the original filename of the recovered mp4 file?
 
-ကျွန်တော်အစပိုင်းမှာတုန်းက PhotoRec အသုံးပြုပြီး Contents တွေကို recover လုပ်ခဲ့တာဖြစ်ပါတယ်။ PhotoRec က Filesystem metadata တွေကိုကြည့်တာမဟုတ်ပဲ Raw Sectors၊ File signature/magic bytes တွေကို Scan လိုက်ဖတ်ရင်းတစ်ခုချင်းစုစုပြီး data တွေပြန်ဆယ်ပေးထားတာမို့လို့ တချို့ Filename တွေကအသစ်ပြောင်းနေတတ်ပါတယ်။  
+ကျွန်တော်အစပိုင်းမှာတုန်းက PhotoRec အသုံးပြုပြီး Contents တွေကို recover လုပ်ခဲ့တာဖြစ်ပါတယ်။ ဒါပေမယ့် PhotoRec က Filesystem metadata တွေကိုကြည့်တာမဟုတ်ပဲ Raw Sectors၊ File signature/magic bytes တွေကို Scan လိုက်ဖတ်ရင်းတစ်ခုချင်းစုစုပြီး data တွေပြန်ဆယ်ပေးထားတာမို့လို့ တချို့ Filename တွေကအသစ်ပြောင်းနေတတ်ပါတယ်။  
 
 ဒါကြောင့် မူရင်း Filename တွေပြန်မြင်ရအောင် `fls` (list file contents) ကို ခုနကအတိုင်း တကယ့် Filesystem ရှိတဲ့ Offset 2048 ထားပြီးစစ်ကြည့်လိုက်ရင် မူရင်း Filename တွေပြန်မြင်ရပါတယ်။
 
