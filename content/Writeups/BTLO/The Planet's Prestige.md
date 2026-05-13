@@ -4,7 +4,6 @@ tags:
   - challenge
   - defensive
   - email
-  - PhishTool
 ---
 
 **Challenge:** https://blueteamlabs.online/home/challenge/the-planets-prestige-e5beb8e545
