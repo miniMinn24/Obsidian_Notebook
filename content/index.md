@@ -31,7 +31,7 @@ See my professional course notes while I study.
 # My Blogs
 My tutorials, guides and blogs that can help for your IT career development.
 
-1. [[How to install Guest Drivers (For Windows in KVM)]]
+1. [[How to install Guest Drivers - For Windows in KVM]]
 2. [[Installing KVM on Arch Linux]]
 3. [[/Blogs/Old Router as Wifi Extender|Old Router as Wifi Extender]]
 
