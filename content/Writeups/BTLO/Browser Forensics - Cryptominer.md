@@ -13,7 +13,7 @@ tags:
 
 # Tools Used
 - [FTK Imager](https://www.exterro.com/digital-forensics-software/ftk-imager) (Windows only) for browser data image analysis and capturing evidence.
-- **OSINT** for researching the specific contents through the internet.
+- **OSINT** for gathering specific information through the internet.
 
 # Questions & Answers
 
@@ -94,7 +94,6 @@ You don't need to understand the entire code (but it's better if you can). Just 
 Therefore, `cryptoloot` is the answer.
 
 ## Q-6. How many hashes is the crypto miner calculating per second?
-
 Looking at the code again, we can see that hashes are calculated 20 times per second:
 
 ```javascript
