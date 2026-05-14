@@ -48,6 +48,11 @@ Windows VM ကိုဖွင့်ပြီးလို့ *This PC* ထဲမ�
 
 ![[2026-05-13_23-20-38_COMPRESSED.mp4]]
 
+# Conclusion
+
+Virtio drivers တွေက Windows VM မှာဘာလို့လိုအပ်တာလဲဆိုတော့ KVM အတွက် Paravirtualized hardware မှာ lack of support ဖြစ်တာကြောင့်ပါ။ အဲ့တာမသွင်းထားရင် Hypervisor (KVM) ကနှေးလာမယ်၊ Performance lag တွေရှိနေမယ် စသဖြင့်ကြုံတွေ့ရပါတယ်။ Virtio Drivers ရှိနေမှ Windows VM နဲ့ KVM Host ကြာထဲမှာတိုက်ရိုက် Communicate လုပ်နိုင်အောင်ကူညီပေးပြီး I/O speeds တွေအားလုံးကို Native ကျကျအလုပ်လုပ်ပေးနိုင်အောင်ကူညီပေးပါတယ်။ 
+
+
 ---
 
 > [!info] Thanks for reading!
