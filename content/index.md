@@ -5,18 +5,19 @@ date: 2026-01-21
 **As a part of my portfolio**, I'm self-hosting this as my own knowledge base (a digital garden) to document my path from today to proficient in Cybersecurity. I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups, so I can prove through real works.
 
 # Writeups
-Documenting my cybersecurity lab progresses through trial-and-errors.
+Documenting my cybersecurity investigation labs through trial-and-errors.
 
-### Blue Team Labs Online
-1. [[Employee of the Year]]
-2. [[The Planet's Prestige]]
-3. [[Log Analysis - Privilege Escalation]]
-4. [[Network Analysis - Web Shell]]
-5. [[Follina]]
+### Blue Team Labs Online (BTLO)
+1. [[Browser Forensics - Cryptominer]]
+2. [[Employee of the Year]]
+3. [[The Planet's Prestige]]
+4. [[Log Analysis - Privilege Escalation]]
+5. [[Network Analysis - Web Shell]]
+6. [[Follina]]
 
-### TryHackMe
+### TryHackMe (THM)
 1. [[Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]
-### HackTheBox
+### HackTheBox (HTB)
 1. [[CTF Try Out|CTF Try Out]]
 
 # Course Walkthroughs
