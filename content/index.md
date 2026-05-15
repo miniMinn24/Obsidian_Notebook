@@ -2,16 +2,18 @@
 title: Knowledge Base
 date: 2026-01-21
 ---
-# Greetings, folks!
+# မိတ်ဆက် (Greetings)
 
-**As a part of my portfolio**, I'm self-hosting this as my own knowledge base to document my path from today to proficient in Cybersecurity. I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups, so I can prove through real works.
+**As a part of my portfolio**, I'm self-hosting this as my own knowledge base to document my path from today to proficient in Cybersecurity. Here, I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups.
+
 
 ![[Pasted image 20260515180531.png]]
 
 If you're wondering what kind of website is this, I combined **[Obsidian](https://obsidian.md)** + **[Quartz](https://quartz.jzhao.xyz)** to convert my .md (Markdown) files into an interactive website. That really helped me to organize everything in one place.
 
+
 # Writeups
-Documenting my cybersecurity investigation labs through trial-and-errors.
+Explore how I document every steps I took on security analysis labs, through trial-and-errors:
 
 ### Blue Team Labs Online (BTLO)
 1. [[Browser Forensics - Cryptominer]]
@@ -27,7 +29,7 @@ Documenting my cybersecurity investigation labs through trial-and-errors.
 1. [[CTF Try Out|CTF Try Out]]
 
 # Course Walkthroughs
-See my professional course notes while I study.
+See my professional course notes while I study:
 
 1. [[/Notes/Coursera/Google-IT-Support/]]
 2. [[/Notes/Cyberwarfare Labs/(BTF) Blue Team Fundamentals|(BTF) Blue Team Fundamentals]]
@@ -36,7 +38,7 @@ See my professional course notes while I study.
 5. [[/Notes/Coursera/Mathematics for CS/Notes]]
 
 # My Blogs
-My tutorials, guides and blogs that can help for your IT career development.
+My tutorials and guides that can help for your IT career development:
 
 1. [[How to install Guest Drivers - For Windows in KVM]]
 2. [[Installing KVM on Arch Linux]]

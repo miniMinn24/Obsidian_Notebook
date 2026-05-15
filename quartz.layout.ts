@@ -11,6 +11,20 @@ export const sharedPageComponents: SharedLayout = {
     limit: 4,
     showTags: true,
   }),
+    Component.Comments({
+    provider: "giscus",
+    options: {
+      repo: "miniMinn24/miniMinn.md",
+      repoId: "R_kgDORRaW3w",
+      category: "General",
+      categoryId: "DIC_kwDORRaW384C9HZk",
+      mapping: "pathname",
+      strict: false,
+      reactionsEnabled: true,
+      inputPosition: "bottom",
+      lang: "en",
+    },
+  }),
 ],
   footer: Component.Footer({
     links: {
