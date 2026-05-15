@@ -2,7 +2,13 @@
 title: Knowledge Base
 date: 2026-01-21
 ---
-**As a part of my portfolio**, I'm self-hosting this as my own knowledge base (a digital garden) to document my path from today to proficient in Cybersecurity. I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups, so I can prove through real works.
+# Greetings, folks!
+
+**As a part of my portfolio**, I'm self-hosting this as my own knowledge base to document my path from today to proficient in Cybersecurity. I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups, so I can prove through real works.
+
+![[Pasted image 20260515180531.png]]
+
+If you're wondering what kind of website is this, I combined **[Obsidian](https://obsidian.md)** + **[Quartz](https://quartz.jzhao.xyz)** to convert my .md (Markdown) files into an interactive website. That really helped me to organize everything in one place.
 
 # Writeups
 Documenting my cybersecurity investigation labs through trial-and-errors.
@@ -37,11 +43,5 @@ My tutorials, guides and blogs that can help for your IT career development.
 3. [[/Blogs/Old Router as Wifi Extender|Old Router as Wifi Extender]]
 
 ---
-
-> [!INFO] How/Why am I hosting this?
-> I love writing notes in **[Obsidian](https://obsidian.md)**, which I always use it everyday on my Linux and I won't have to go to online platforms just to write something. That really helped me to organize every contents in one place.
->  I'm self-hosting this static website with **[Quartz](https://quartz.jzhao.xyz)** on **GitHub** to make it publicly accessible. It is a plugin that is specifically designed for Obsidian to convert `.md` files into web page.
->
-> - _They're all open-source and offers full cuztomization!_
 
 Have questions or feedbacks? Connect me via [GitHub](https://github.com/miniMinn24) or [LinkedIn](https://www.linkedin.com/in/min-maung-maung-03352028a/).

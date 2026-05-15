@@ -27,6 +27,7 @@ I wrote this full walk-through to help anyone who can't find a clue, not to chea
 > Since I'm just also a newcomer, please be aware that some writeup details might be **missing** or **un-perfectly explained**, but I gave my full efforts on this. Enjoy!
 
 ## About Team
+
 - **Team Name**: mɨnɨM1nn
 - **Motto**: "Listen to the silence."
 - **Members**: mɨnɨMinn
@@ -101,10 +102,15 @@ In summary, these include:
 Since someone has sabotaged the design to make drones fail from flying, let's analyze those flight controller files with a **Gerber File Viewer** software:
 
 ![[Pasted image 20260125115644.png]]
+
 Just on the first layer called **mechanical layer**, the **first half of the flag** is found: `HTB{533_7h3_1nn32_w02k1n95`
+
 ![[Pasted image 20260122192513.png]]
+
 Meaning _`See the inner working`_, so we should keep analyzing the inner layers beneath it. In the left sidebar, I disabled layers by layers until I see the trace:
+
 ![[Pasted image 20260122192905.png]]
+
 There we go, we see the second half of the flag.
 
 > [!caution]- (SPOILER) Click to see the flag
@@ -156,14 +162,17 @@ According to the challenge:
 > Having **captured the traffic** from that connection the only thing that remains is to locate the packet that contains the secret information.
 
 We are provided with a network traffic captured file:
+
 ![[Pasted image 20260125121808.png]]
 
 `.pcapng` or **(PCAP Next Generation)** is a network traffic data containing raw network packets, usually headers and payloads, captured from a live network or simulated environment.
 
 So, we shall happily use **Wireshark** software to open these files:
+
 ![[Pasted image 20260125123157.png]]
 
 Since the specific secret information is could be in one of these frames, let's first quickly filter a pattern by _"frame contains HTB{"_:
+
 ![[Pasted image 20260125125214.png]]
 
 There it is! We found the flag in that specific frame.
@@ -188,6 +197,7 @@ So, I tried if there're anything useful info to see with `strings` and `file` co
 ![[Pasted image 20260129123933.png]]
 
 Let's see the decompiled code of `casino` in **Ghidra** to see how it really works:
+
 ![[Pasted image 20260127162658.png]]
 
 There're lots of codes to see, but let's break it down in summary.
