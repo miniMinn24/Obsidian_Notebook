@@ -1,4 +1,11 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+.explorer-content a {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
 /* Hide icons in sidebar / file tree */

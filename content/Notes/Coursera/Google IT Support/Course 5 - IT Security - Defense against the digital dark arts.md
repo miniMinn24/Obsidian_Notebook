@@ -1101,8 +1101,9 @@ Update firewall rules and ACLs if an exposure was discovered in the course of th
 
 ---
 **Courses of Google IT Support Professional**
-1. [[/Notes/Coursera/Google IT Support/IT Support Fundamentals|IT Support Fundamentals]]
-2. [[/Notes/Coursera/Google IT Support/The Bits and Bytes of Computer Networking|The Bits and Bytes of Computer Networking]]
-3. [[Notes/Coursera/Google IT Support/Operating Systems and You - Becoming a Power User|Operating Systems and You - Becoming a Power User]]
-4. [[/Notes/Coursera/Google IT Support/System Administration and IT Infrastructure Services|System Administration and IT Infrastructure Services]]
-5. (**Current**): [[/Notes/Coursera/Google IT Support/IT Security - Defense against the digital dark arts|IT Security - Defense against the digital dark arts]]
+
+- [[Course 1 -  IT Support Fundamentals]]
+- [[Course 2 - The Bits and Bytes of Computer Networking]]
+- [[Course 3 - Operating Systems and You - Becoming a Power User]]
+- [[Course 4 - System Administration and IT Infrastructure Services]]
+- [[Course 5 - IT Security - Defense against the digital dark arts]]

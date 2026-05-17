@@ -4,6 +4,7 @@ tags:
   - virtualization
   - kvm
   - windows
+banner: "![[Pasted image 20260515180531.png]]"
 ---
 ![[Pasted image 20260514002201.png]]
 
