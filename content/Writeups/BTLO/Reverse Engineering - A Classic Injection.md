@@ -16,8 +16,10 @@ tags:
 > This file includes **REAL MALWARE**. Please be careful when interacting with it. We strongly suggest players create a 'dirty' virtual machine to analyse malicious files in.
 
 # Tools Used
-
-
+- [Detect It Easy](https://github.com/horsicq/detect-it-easy) to detect compilers of PE file and malware/RE analysis.
+- [Cutter](https://cutter.re/) for reverse-engineering while keeping the user experience at mind.
+- [Sysinternals](https://live.sysinternals.com/) (ProcMon) to watch malware processes and behaviors.
+- A **Windows VM** as a vulnerable machine to execute malware.
 
 # Questions & Answers
 
@@ -39,7 +41,7 @@ I tried putting these as answers, but the actual answer sits in Scan: **PEiD** (
 
 I understood that the Sleep function is used for **Bypassing Evasion Techniques**, where the malware intends to delay execution to evade automated sandbox execution (anti-analysis).  
 
-So, I dived into different Reverse Engineering tool and the one I found with beginner-friendly interface is **Cutter**. I opened the file and saw a sleep function being referenced in Imports:
+So, I dived into different Reverse Engineering tool and the one I found with beginner-friendly interface is [Cutter](https://cutter.re/). I opened the file and saw a sleep function being referenced in Imports:
 
 ![[Pasted image 20260518172440.png]]
 
