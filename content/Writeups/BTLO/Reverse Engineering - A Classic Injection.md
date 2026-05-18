@@ -15,3 +15,102 @@ tags:
 > [!warning] BTLO Challenge's Warning
 > This file includes **REAL MALWARE**. Please be careful when interacting with it. We strongly suggest players create a 'dirty' virtual machine to analyse malicious files in.
 
+# Tools Used
+
+
+
+# Questions & Answers
+
+## Q-1. What is the name of the compiler used to generate the EXE?
+
+I had no experience in anything related to RE before, so I basically started with file metadata analysis. So, a PE (Portable Executable) file is the standard binary structure used by Windows, which provides a framework for managing code across different hardware architectures and Windows versions.  
+
+I came across so many different tools and what I found for my needs is [Detect It Easy](https://github.com/horsicq/detect-it-easy). It is a lightweight open-source utility designed for initial triage in malware analysis/RE. It can detect compilers, linkers, packers and protectors embedded in executable files to identify potential malicious code hidden by obfuscation. 
+
+So, I scanned the file and we the information:
+
+![[Pasted image 20260518162630.png]]
+
+I tried putting these as answers, but the actual answer sits in Scan: **PEiD** (older Windows tool). We can see that the version in the answer should be **C++ 8**:
+
+![[Pasted image 20260518164330.png]]
+
+## Q-2. This malware, when executed, sleeps for some time. What is the sleep time in minutes?
+
+I understood that the Sleep function is used for **Bypassing Evasion Techniques**, where the malware intends to delay execution to evade automated sandbox execution (anti-analysis).  
+
+So, I dived into different Reverse Engineering tool and the one I found with beginner-friendly interface is **Cutter**. I opened the file and saw a sleep function being referenced in Imports:
+
+![[Pasted image 20260518172440.png]]
+
+I viewed the assembly code in by "Show X-Refs", and there's a value used for the sleep function:
+
+![[Pasted image 20260518172711.png]]
+
+I decoded that Hex value to decimal using CyberChef, and calculated the time from Milliseconds to Minute format.
+
+![[Pasted image 20260518173316.png]]
+
+## Q-3. After the sleep time, it prompts for user password, what is the correct password?
+
+Just after a sleep, I saw a value in string format that it was asking for the password (I spent so much time reading assembly, ofc):
+
+![[Pasted image 20260518174332.png]]
+
+
+## Q-4. What is the size of the shellcode?
+
+I followed next of the function and I checked on **WriteProcessMemory** function. There's asking dwSize and it was actually related to shellcode size:
+
+![[Pasted image 20260518180211.png]]
+
+## Q-5. Shellcode injection involves three important windows API. What is the name of the API Call used?
+
+Checking the Imports again to see something interesting what APIs are used. After spending time searching, I see [CreateRemoteThread](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread). I learned that the function will use an address space of another process, then it creates a thread inside:
+
+![[Pasted image 20260518181246.png]]
+
+## Q-6. What is the name of the victim process?
+
+When I look at the strings again, I see a path C:\Windows\System32\nslookup.exe is being referenced:
+
+![[Pasted image 20260518182118.png]]
+
+## Q-7. What is the file created by the sample?
+
+After a lot of trials-and-errors, I realized that this should be done by Dynamic Analysis rather than just reading assembly. I used a Windows VM, took a snapshot before malware execution, isolated networks and uninstalled guest drivers.  
+
+I ran the malware, but it needed some [Microsoft Visual C++ dependencies](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170&utm_source=chatgpt.com#latest-supported-redistributable-version) (X86 and X64 needed): 
+
+![[Pasted image 20260518183611.png]]
+
+I setup ProcMon (sysinternals) and used a filter rule just to focus on analyseme.exe processes. More importantly, since we're looking for what file is created, added a filter to show **Process Create** only:
+
+![[Pasted image 20260518190246.png]]
+
+Now it was time to execute the malware. Note that it needs to be waited for **3 minutes** to be executed and you'll have to enter the password from we did at [[Reverse Engineering - A Classic Injection#Q-3. After the sleep time, it prompts for user password, what is the correct password?|Q-3]]:
+
+![[Pasted image 20260518190905.png]]
+
+After execution, we look at the ProcMon, there's a suspicious that powershell.exe is executed. In the event details, there's a bunch of encoded commands:
+
+![[Pasted image 20260518191101.png]]
+
+Going to CyberChef to decode this, I used base64 decoding and remove null bytes to see the original:
+
+![[Pasted image 20260518191742.png]]
+
+## Q-8. What is the message in the created file
+
+We can see the message is written into btlo.txt file:
+
+![[Pasted image 20260518191932.png]]
+
+## Q-9. What is the program that the shellcode used to create and write this file
+
+As we saw in ProcMon, the event shows that it used powershell.exe to write that file:
+
+![[Pasted image 20260518192145.png]]
+
+# My thoughts
+This is one of most difficult challenge for me as for someone who never seen Reverse Engineering before, but the experience is totally worth it, though I didn't understand everything. There will be always trials-and-errors to understand what's important by asking a lot of quesitons, cheers.
