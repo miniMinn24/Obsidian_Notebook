@@ -5,7 +5,7 @@ const Profile: QuartzComponent = () => {
     <a href="/miniMinn.md" class="profile-link-wrapper">
       <div class="profile-card">
         <img
-          src="../static/avatar.jpg"
+          src="https://media.licdn.com/dms/image/v2/D5635AQGz7-ZwQ1qt8w/profile-framedphoto-shrink_800_800/B56Z4WN7RpIQAg-/0/1778489210308?e=1779717600&v=beta&t=wwanKgX0JVL36T-bFyEaIfvhnMDMI3T4LNlq34aMank"
           class="profile-avatar"
         />
 
