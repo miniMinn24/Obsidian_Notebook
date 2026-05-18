@@ -2,10 +2,10 @@ import { QuartzComponent, QuartzComponentConstructor } from "./types"
 
 const Profile: QuartzComponent = () => {
   return (
-    <a href="/index" class="profile-link-wrapper">
+    <a href="/miniMinn.md" class="profile-link-wrapper">
       <div class="profile-card">
         <img
-          src="/static/avatar.jpg"
+          src="../static/avatar.jpg"
           class="profile-avatar"
         />
 
