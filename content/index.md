@@ -1,27 +1,28 @@
 ---
-title: Knowledge Base
+title: About My Knowledge Base | မိတ်ဆက်
 date: 2026-01-21
 ---
-# မိတ်ဆက် (Greetings)
-
-**As a part of my portfolio**, I'm self-hosting this as my own knowledge base to document my path from today to proficient in Cybersecurity. Here, I published CTF labs writeups, professional course walkthroughs, how-to guides and project setups.
+**As a part of my portfolio**, I'm self-hosting this as my own knowledge base to document my path from today to proficient in Cybersecurity. Here, I published CTF labs writeups, professional course walkthroughs, how-to guides and open-source project setups.
 
 
 ![[Pasted image 20260515180531.png]]
 
-If you're wondering what kind of website is this, I combined **[Obsidian](https://obsidian.md)** + **[Quartz](https://quartz.jzhao.xyz)** to convert my .md (Markdown) files into an interactive website. That really helped me to organize everything in one place.
+If you're wondering what type of website is this, I combined **[Obsidian](https://obsidian.md)** + **[Quartz](https://quartz.jzhao.xyz)** to convert my MD (Markdown) files into an interactive website.  
+- **Obsidian** helped me to organize everything in one place.
+- **Quartz** helped to publish contents from one place.
 
 
 # Writeups
 Explore how I document every steps I took on security analysis labs, through trial-and-errors:
 
 ### Blue Team Labs Online (BTLO)
-1. [[Browser Forensics - Cryptominer]]
-2. [[Employee of the Year]]
-3. [[The Planet's Prestige]]
-4. [[Log Analysis - Privilege Escalation]]
-5. [[Network Analysis - Web Shell]]
-6. [[Follina]]
+1. [[Meta]]
+2. [[Browser Forensics - Cryptominer]]
+3. [[Employee of the Year]]
+4. [[The Planet's Prestige]]
+5. [[Log Analysis - Privilege Escalation]]
+6. [[Network Analysis - Web Shell]]
+7. [[Follina]]
 
 ### TryHackMe (THM)
 1. [[Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]

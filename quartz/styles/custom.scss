@@ -1,11 +1,64 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// Explorer Multi-line break fix
 .explorer-content a {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 100%;
+}
+
+// Profile card - Custom Component
+@media (max-width: 800px) {
+  .profile-card {
+    display: none;
+  }
+}
+
+.profile-card {
+  text-align: center;
+  padding: 0.8rem 0.5rem;
+}
+
+.profile-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  object-fit: cover;
+  margin-bottom: 0.55rem;
+}
+
+.profile-card h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.profile-card p {
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1.35;
+  color: var(--secondary);
+  font-size: 0.92rem;
+}
+
+.profile-links {
+  margin-top: 0.2rem;
+}
+
+.profile-links a {
+  padding: 0.2rem;
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.profile-links a:hover {
+  color: var(--tertiary);
+}
+.profile-link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 /* Hide icons in sidebar / file tree */
