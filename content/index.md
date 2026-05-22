@@ -32,11 +32,11 @@ Explore how I document every steps I took on security analysis labs, through tri
 # 🎓 Course Walkthroughs
 See my professional course notes while I study:
 
-1. [[/Notes/Coursera/Google-Cybersecurity]] (In progress)
-2. [[/Notes/Coursera/Google-IT-Support/]]
+1. [[/Notes/Coursera/Google-Cybersecurity/ | Google Cybersecurity Professional]] (In progress)
+2. [[/Notes/Coursera/Google-IT-Support/ | Google IT Support Professional]]
 3. [[/Notes/Cyberwarfare Labs/(BTF) Blue Team Fundamentals|(BTF) Blue Team Fundamentals]]
-4. [[/Notes/Coursera/Python for Data Science, AI & Development]]
-5. [[/Notes/Coursera/Mathematics for CS/Notes]]
+4. [[/Notes/Coursera/Python for Data Science, AI & Development/ | Python for Data Science, AI & Development]]
+5. [[/Notes/Coursera/Mathematics for CS/Notes | Mathematics for Computer Science (University of London)]]
 
 # 🪶 My Blogs
 My tutorials and guides that can help for your IT career development:
