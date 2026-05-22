@@ -4,6 +4,7 @@ tags:
   - cybersecurity
   - course
   - concepts
+  - foundation
 ---
 This is the **first introduction course** of [[/Notes/Coursera/Google-Cybersecurity|Google Cybersecurity]]. You can view the next course here: [[/Notes/Coursera/Google Cybersecurity/Play It Safe - Manage Security Risks|Play It Safe - Manage Security Risks]].
 
@@ -15,6 +16,8 @@ This is the **first introduction course** of [[/Notes/Coursera/Google-Cybersecur
 4. [Module 4 - Cybersecurity tools and programming languages](#module-4---cybersecurity-tools-and-programming-languages)
 
 ---
+
+![[Pasted image 20260522154718.png]]
 
 # Module 1 - Foundations of Cybersecurity
 

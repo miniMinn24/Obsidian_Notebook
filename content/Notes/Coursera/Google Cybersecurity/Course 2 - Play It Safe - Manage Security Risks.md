@@ -4,15 +4,20 @@ tags:
   - cybersecurity
   - course
   - riskassessment
+  - tools
+  - frameworks
 ---
 This is the **second course** of [[/Notes/Coursera/Google-Cybersecurity|Google Cybersecurity Professional]]. We previously the learned introduction here [[/Notes/Coursera/Google Cybersecurity/Foundations of Security|Foundations of Security]].
 
 **Table of Contents**
 
 1. [Module 1 - Security domains](#module-1---security-domains)
-
+2. [Module 2 - Security frameworks and controls](#module-2---security-frameworks-and-controls)
+3. [Module 3 - Introduction to Cybersecurity Tools](#module-3---introduction-to-cybersecurity-tools)
+4. [Module 4 - Use playbooks to respond to incidents](#module-4---use-playbooks-to-respond-to-incidents)
 
 ---
+
 ![[Pasted image 20260430143958.png]]
 
 # Module 1 - Security domains
@@ -216,8 +221,8 @@ The process of returning affected systems back to normal operation.
 Emphasizes the importance of strong cybersecurity governance across all levels of the organization. Establishing and maintaining the structures and processes need to effectively manage risk.
 > Setting clear cybersecurity objectives, ensuring leadership commitment, developing and implementing a comprehensive risk management strategy, and continuously improving cybersecurity performance.
 
-## OWASP security principles
-**Open Web Applications Security Project**
+## OWASP (Open Web Application Security Project) principles
+
 - **Minimize attack surface area** (e.g., phishing emails, weak passwords | restricting access, establish complex passwords)
 - **Principle of least privilege** (e.g., you may have access to locked data, but can't be able to change permissions)
 - **Defense in depth** (e.g., MFA setup)
@@ -258,5 +263,103 @@ Emphasizes the importance of strong cybersecurity governance across all levels o
 - Identifies compliance regulations
 
 ![[o6XzbUnYRK6pwAtl0ME25Q_3c91489225e04f408952ba8a8595e0f1_Control-categories.pdf]]
+
+
+# Module 3 - Introduction to Cybersecurity Tools
+
+## Logs and SIEM Tools
+
+**Log**: A record of events that occur within an organization's systems and networks.
+- **Firewall logs**: A record of attempted or established connections for incoming traffic from the internet. It also includes outbound requests to the internet from within the network.
+- **Network logs**: A record of all computers and devices that enter and leave the network. It also records connections between devices and services on the network.
+- **Server logs**: A record of events related to services, such as websites, emails, or file shares. It includes actions: login, password, and username requests.
+
+**Security Information and Event Management (SIEM)**: A application that collects and analyzes log data to monitor critical activities in an organization. They helps to inform only customized important logs/events, which saves time for better efficiency.
+
+![[Pasted image 20260521162404.png|410]]
+
+## SIEM Dashboards
+
+**Metrics**: Key technical attributes, such as response time, availability, and failure rate, which are used to assess the performance of a software application.
+
+> [!quote] Parisa: The parallels of accessibility and security
+> "I think of accessibility as making information, activities, or even environments meaningful, sensible, usable to as many people as possible."
+> "Decisions we make based on our own abilities to enhance security can actually be ineffective."
+> "For people who are new to the field of cybersecurity, it's just really important to remember that there's a range of abilities that you are wanting to serve."
+
+## Explore Common SIEM Tools
+
+- **Self-hosted**: Used in the company/organization when control over confidential data is required.
+- **Cloud-hosted**: Used by companies who doesn't want to maintain and invest for SIEM.
+
+But **both** can be used as **Hybrid environments**
+
+#### Splunk Enterprise
+A self-hosted tool used to retain, analyze, and search an organization's log data to provide security information and alerts in real-time.
+
+#### Splunk Cloud
+A cloud-hosted tool used to collect, search, and monitor log data.
+
+#### Chronicle
+A cloud-native tool designed to retain, analyze, and search data.
+
+## Use SIEM tools to protect organizations
+
+### Splunk
+- **Security posture dashboard**: SOCs, display last 24 hours of events and determine if performing as designed, in real time.
+- **Executive summary dashboard**: Overall health over time to improve and reduce risk, provide high-level insights to stakeholders, summary of incidents and trends.
+- **Incident review dashboard**: Identify suspicious patterns, highlights higher risk items that need immediate review by an analyst, visual timeline.
+- **Risk analysis dashboard**: Identify risk for each risk object, specific user, logging in outside of normal working hours, vulnerabilities in critical assets.
+
+### Chronicle
+A specific asset, a domain name, a user, an IP address.
+- **Enterprise insights dashboard**: Indicators of compromise (IOCs), monitor login or data access attempts to critical asset.
+- **Data ingestion and health dashboard**: Event logs, log sources, rates of data being processed. Ensuring log sources are correctly configured.
+- **IOC matches dashboard**: Observe domain names, IP addresses, devices IOCs over time in order to identify trends. Used to search for activity associated with an alert.
+- **Main dashboard**: Timeline of events, high-level summary of information, organization's data ingestion.
+- **Rule detections dashboard**: Highest occurrences, severities and detections over time, (prevent user opening attachments), establish mitigation tactics to reduce level of risk.
+- **User sign in overview dashboard**: Identify unusual user activity, mitigate threats, risks, and vulnerabilities.
+
+# Module 4 - Use playbooks to respond to incidents
+
+## Phases of an incident response playbook
+
+**Playbook**: A manual that provides details about any operational action.  
+
+**Incident Response**: An organization's quick attempt to identify an attack, contain the damage, and correct the effects of a security breach.  
+1. **Preparation**: Outlining responsibility for each roles.
+2. **Detection and Analysis**: Right tools and workflows.
+3. **Containment**: Minimize damage on ongoing risks.
+4. **Eradication and Recovery**: Mitigating vulnerabilities, removing affected malicious codes.
+5. **Post incident activity**: Documenting and reporting to stakeholders.
+6. **Coordination**: Meets compliance requirements.
+
+#### 1. Preparation
+Before incidents occur, mitigate potential impacts on the organization by documenting, establishing staffing plans, and educating users.
+
+#### 2. Detection and Analysis
+Detect and analyze events by implementing defined processes and appropriate technology.  
+
+![[Pasted image 20260522151004.png]]
+
+#### 3. Containment
+Prevent further damage and reduce immediate impact of incidents.
+
+#### 4. Eradication and Recovery
+Completely remove artifacts of the incident so that an organization can return to normal operations.
+
+#### 5. Post-incident Activity
+Document the incident, inform organizational leadership, and apply lessons learned.
+
+#### 6. Coordination
+Report incidents and share information throughout the response process, based on established standards.  
+
+![[Pasted image 20260522150853.png]]
+
+> [!quote] Incident response and the value of playbooks.
+> "You can use playbooks for: Open attacks, Privacy incidents, Data leaks, DoS attacks, Service alerts and others."
+> "External search researchers also report vulnerabilities, so playbook can help as a guide to fix."
+> "Some teams come in and out of fashion, but security is ever present."
+
 
 

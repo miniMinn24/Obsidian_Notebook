@@ -44,7 +44,8 @@ My tutorials and guides that can help for your IT career development:
 
 1. [[How to install Guest Drivers - For Windows in KVM]]
 2. [[Installing KVM on Arch Linux]]
-3. [[/Blogs/Old Router as Wifi Extender|Old Router as Wifi Extender]]
+3. [[Tor Proxy on Arch Linux]]
+4. [[/Blogs/Old Router as Wifi Extender|Old Router as Wifi Extender]]
 
 ---
 
