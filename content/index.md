@@ -2,17 +2,16 @@
 title: About My Knowledge Base | မိတ်ဆက်
 date: 2026-01-21
 ---
-**As a part of my portfolio**, I'm self-hosting this as my own knowledge base to document my path from today to proficient in Cybersecurity. Here, I published CTF labs writeups, professional course walkthroughs, how-to guides and open-source project setups.
-
+**As a part of my portfolio**, I'm self-hosting this as my own knowledge base to document my path from today to proficient in Cybersecurity. I publish security analysis/CTF labs writeups, professional course walkthroughs, how-to guides and open-source project setups.
 
 ![[Pasted image 20260515180531.png]]
 
-If you're wondering what type of website is this, I combined **[Obsidian](https://obsidian.md)** + **[Quartz](https://quartz.jzhao.xyz)** to convert my MD (Markdown) files into an interactive website.  
+If you're wondering how this website was built, I combined **[Obsidian](https://obsidian.md)** + **[Quartz](https://quartz.jzhao.xyz)** to convert my MD (Markdown) files into an interactive website, then hosted it on GitHub pages. I made this project because:
 - **Obsidian** helped me to organize everything in one place.
 - **Quartz** helped to publish contents from one place.
 
 
-# Writeups
+# 📓 Writeups
 Explore how I document every steps I took on security analysis labs, through trial-and-errors:
 
 ### Blue Team Labs Online (BTLO)
@@ -30,7 +29,7 @@ Explore how I document every steps I took on security analysis labs, through tri
 ### HackTheBox (HTB)
 1. [[CTF Try Out|CTF Try Out]]
 
-# Course Walkthroughs
+# 🎓 Course Walkthroughs
 See my professional course notes while I study:
 
 1. [[/Notes/Coursera/Google-Cybersecurity]] (In progress)
@@ -39,7 +38,7 @@ See my professional course notes while I study:
 4. [[/Notes/Coursera/Python for Data Science, AI & Development]]
 5. [[/Notes/Coursera/Mathematics for CS/Notes]]
 
-# My Blogs
+# 🪶 My Blogs
 My tutorials and guides that can help for your IT career development:
 
 1. [[How to install Guest Drivers - For Windows in KVM]]
