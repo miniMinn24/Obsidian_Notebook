@@ -33,9 +33,9 @@ Explore how I document every steps I took on security analysis labs, through tri
 # Course Walkthroughs
 See my professional course notes while I study:
 
-1. [[/Notes/Coursera/Google-IT-Support/]]
-2. [[/Notes/Cyberwarfare Labs/(BTF) Blue Team Fundamentals|(BTF) Blue Team Fundamentals]]
-3. [[/Notes/Coursera/Google-Cybersecurity]]
+1. [[/Notes/Coursera/Google-Cybersecurity]] (In progress)
+2. [[/Notes/Coursera/Google-IT-Support/]]
+3. [[/Notes/Cyberwarfare Labs/(BTF) Blue Team Fundamentals|(BTF) Blue Team Fundamentals]]
 4. [[/Notes/Coursera/Python for Data Science, AI & Development]]
 5. [[/Notes/Coursera/Mathematics for CS/Notes]]
 
