@@ -15,14 +15,16 @@ If you're wondering how this website was built, I combined **[Obsidian](https://
 Explore how I document every steps I took on security analysis labs, through trial-and-errors:
 
 ### Blue Team Labs Online (BTLO)
-1. [[Reverse Engineering - A Classic Injection]]
-2. [[Meta]]
-3. [[Browser Forensics - Cryptominer]]
-4. [[Employee of the Year]]
-5. [[The Planet's Prestige]]
-6. [[Log Analysis - Privilege Escalation]]
-7. [[Network Analysis - Web Shell]]
-8. [[Follina]]
+
+1. [[Network Analysis - Malware Compromise]]
+2. [[Reverse Engineering - A Classic Injection]]
+3. [[Meta]]
+4. [[Browser Forensics - Cryptominer]]
+5. [[Employee of the Year]]
+6. [[The Planet's Prestige]]
+7. [[Log Analysis - Privilege Escalation]]
+8. [[Network Analysis - Web Shell]]
+9. [[Follina]]
 
 ### TryHackMe (THM)
 1. [[Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]

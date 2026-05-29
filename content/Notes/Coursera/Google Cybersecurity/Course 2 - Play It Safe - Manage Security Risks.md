@@ -361,5 +361,20 @@ Report incidents and share information throughout the response process, based on
 > "External search researchers also report vulnerabilities, so playbook can help as a guide to fix."
 > "Some teams come in and out of fashion, but security is ever present."
 
+## Denial of Service (DoS) attacks
+
+**Distributed Denial of service attack (DDoS)**: A type of denial of service attack that uses multiple devices or servers in different locations to flood the target network with unwanted traffic.  
+
+**SYN (synchronize) flood attack**: A type of DoS attack that simulates a TCP connection and floods a server with SYN packets.  
+
+**Internet Control Message Protocol (ICMP)**: An internet protocol used by devices to tell each other about data transmission error across the network.  
+	- **ICMP flood**: A type of DoS attack performed by an attacker repeatedly sending ICMP packets to a network server.  
+
+**Ping of death**: A type of DoS attack caused when a hacker pings a system by sending it an oversized ICMP packet that is bigger than 64 KB.   
+
+#### Interpreting output by a network analyzer
+**tcpdump** prints the output of the command as the sniffed packets in the command line, and optionally to a log file, after a command is executed. The output of a packet capture contains many pieces of important information about the network traffic. 
+
+![[Pasted image 20260524223620.png]]
 
 
