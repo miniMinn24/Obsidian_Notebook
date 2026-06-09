@@ -5,7 +5,14 @@ tags:
   - cybersecurity
   - networking
 ---
+**Table of Contents**
 
+1. [Module 1 - Network Architecture](#module-1---network-architecture)
+2. [Module 2 - Network Operations](#module-2---network-operations)
+3. [Module 3 - Secure against network intrusions](#module-3---secure-against-network-intrusions)
+4. [Module 4 - Security hardening](#module-4---security-hardening)
+
+---
 ![[Pasted image 20260523135757.png]]
 
 # Module 1 - Network Architecture
@@ -143,14 +150,6 @@ A server that fulfills the requests of a client by forwarding them on to other s
 
 # Module 3 - Secure against network intrusions
 
-## Cybersecurity Incident Report: Network Traffic Analysis
-
-**Part 1: Provide a summary of the problem found in the the tcpdump log.**  
-As part of the DNS protocol, the UDP protocol was used to contact the DNS server to retrieve the IP address for the domain name of `yummyrecipesforme.com`. The ICMP protocol was used to respond with an error message, indicating issues contacting the DNS server. The UDP message going from your browser to the DNS server is shown in the first two lines of every log event. The ICMP error response from the DNS server to your browser is displayed in the third and fourth lines of every log event with the error message, “UDP port 53 unreachable.” Since port 53 is associated with DNS protocol traffic, we know this is an issue with the DNS server. Issues with performing the DNS protocol are further evident because the plus sign after the query identification number 35084 indicates flags with the UDP message and the “A?” symbol indicates flags with performing DNS protocol operations. Due to the ICMP error response message about port 53, it is highly likely that the DNS server is not responding. This assumption is further supported by the flags associated with the outgoing UDP message and domain name retrieval.  
-
-**Part 2: Explain your analysis of the data and provide at least one cause of the incident.**  
-The incident occurred today at 1:24 p.m. Customers notified the organization that they received the message “destination port unreachable” when they attempted to visit the website yummyrecipesforme.com. The cybersecurity team providing IT services to their client organization are currently investigating the issue so customers can access the website again. In our investigation into the issue, we conducted packet sniffing tests using tcpdump. In the resulting log file, we found that DNS port 53 was unreachable. The next step is to identify whether the DNS server is down or traffic to port 53 is blocked by the firewall. The DNS server might be down due to a successful Denial of Service attack or a misconfiguration. 
-
 ## Malicious packet sniffing
 
 **Passive packet sniffing**: A type of attack where data packets are read in transit.  
@@ -171,25 +170,6 @@ A network attack performed when a malicious actor intercepts a data packet in tr
 
 #### 3. Smurf attack
 A network attack performed when an attacker sniffs an authorized user's IP address and floods it with packets.  
-
-## Cybersecurity Incident Report
-**Section 1: Identify the type of attack that may have caused this
-network interruption**  
-
-While web server was normally communicating with the internal hosts, the server was loaded by a volume of network traffic and was unable to use the service by hosts.  
-The logs show that the server was communicating with other hosts normally, but suddenly, an unknown IP address appeared and it started to perform send multiple SYN requests to the server.  
-The event could be the server is under DoS attack by being loaded with a volume of network traffics.  
-
-**Section 2: Explain how the attack is causing the website to malfunction**  
-When visitors try to establish a connection with the web server, a three-way handshake is used:
-
-1. First, the client sends `SYN` to the web server requesting if a connection can be able to establish.
-2. Second, the server acknowledges the request by sending `SYN/ACK` to the client.
-3. Lastly, the client acknowledges that the connection can be established by sending `ACK` to the server. Then, the TCP connection is successfully established and ready to data to transfer over the network.
-
-When an attacker sends a large number of `SYN` packets all at once, the server would try to acknowledge all of the request, which could results in overloaded traffics and making the services unresponsive or un-available to others.  
-
-In the logs, the malicious IP `203.0.113.0` started a three-way handshake, then sent a massive volume of `SYN` packets. The server become unresponsive to other normal hosts, overloaded with large traffic of `SYN` packets and couldn't fulfill the requests by acknowledging (`SYN/ACK`) back to the hosts.
 
 # Module 4 - Security hardening
 
@@ -244,7 +224,17 @@ An application that collects and analyzes log data to monitor critical activitie
 
 ![[Pasted image 20260525214420.png]]
 
+> [!quote] Kelsey: Cloud security explained
+> "As more and more companies move into cloud. You may just be the person who can help one of those organizations finally make that leap because they have a professional on their team."
 
+## Secure the cloud
+
+- **Identity access management (IAM)**: is a collection of processes and technologies that helps organizations manage digital identities in their environment.
+- **Configuration**: Each cloud service necessitates precise configuration to uphold security and compliance standards.
+- **Attack surface**: Cloud service providers (CSPs) offer numerous applications and services for organizations at a low cost. Every service or application on a network carries its own set of risks and vulnerabilities and increases an organization’s overall attack surface.
+- **Zero-day attacks**: Zero-day attacks are an important security consideration for organizations using cloud or traditional on-premise network solutions. A zero day attack is an exploit that was previously unknown.
+- **Visibility and tracking**: CSPs take responsibility for security in the cloud, but they do not allow the organizations that use their infrastructure to monitor traffic on the CSP’s servers.
+- **Share responsibility model**: CSP must take responsibility for security involving the cloud infrastructure, including physical data centers, hypervisors, and host operating systems.  
 
 
 

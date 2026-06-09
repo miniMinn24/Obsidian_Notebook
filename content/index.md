@@ -26,10 +26,12 @@ Explore how I document every steps I took on security analysis labs, through tri
 8. [[Network Analysis - Web Shell]]
 9. [[Follina]]
 
+### HackTheBox (HTB)
+1. [[Brutus]]
+2. [[CTF Try Out|CTF Try Out]]
+
 ### TryHackMe (THM)
 1. [[Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]
-### HackTheBox (HTB)
-1. [[CTF Try Out|CTF Try Out]]
 
 # 🎓 Course Walkthroughs
 See my professional course notes while I study:
