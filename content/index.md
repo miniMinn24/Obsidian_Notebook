@@ -16,6 +16,7 @@ Explore how I document every steps I took on security analysis labs, through tri
 
 ### Blue Team Labs Online (BTLO)
 
+#### Challenges
 1. [[Network Analysis - Malware Compromise]]
 2. [[Reverse Engineering - A Classic Injection]]
 3. [[Meta]]
@@ -27,10 +28,18 @@ Explore how I document every steps I took on security analysis labs, through tri
 9. [[Follina]]
 
 ### HackTheBox (HTB)
+#### Sherlock 
 1. [[Brutus]]
+
+#### Season 11
+1. [[Reactor]]
+
+#### Events
 2. [[CTF Try Out|CTF Try Out]]
 
 ### TryHackMe (THM)
+
+#### Events
 1. [[Love at First Breach - Beginner's Track|Love at First Breach - Beginner's Track]]
 
 # 🎓 Course Walkthroughs

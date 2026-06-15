@@ -7,9 +7,13 @@ export const sharedPageComponents: SharedLayout = {
   header: [],
   afterBody: [
     // Component.Backlinks(),
+    // Component.Graph(),
     Component.RecentNotes({
-    limit: 4,
-    showTags: true,
+      title: "Related contents",
+      limit: 4,
+      showTags: true,
+      showDate: false,
+      
   }),
     Component.Comments({
     provider: "giscus",
@@ -28,8 +32,8 @@ export const sharedPageComponents: SharedLayout = {
 ],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      //GitHub: "https://github.com/jackyzha0/quartz",
+      //"Discord Community": "https://discord.gg/cRFFHYye7t",
     },
   }),
 }
@@ -46,7 +50,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
-    Component.Profile(),
     Component.Flex({
       components: [
         {
@@ -61,8 +64,9 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Explorer(),
   ],
   right: [
-    Component.Graph(),
+    Component.Profile(),
     Component.DesktopOnly(Component.TableOfContents()),
+    // Component.Graph(),
     Component.Backlinks(),
   ],
 }
@@ -71,9 +75,10 @@ export const defaultContentPageLayout: PageLayout = {
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
-    Component.Profile(),
     Component.MobileOnly(Component.Spacer()),
     Component.Explorer(),
   ],
-  right: [],
+  right: [
+    Component.Profile(),
+],
 }

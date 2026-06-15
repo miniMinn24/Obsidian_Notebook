@@ -3,7 +3,7 @@ date: 2026-01-22
 tags:
   - ctf
   - htb
-  - challenges
+  - challenge
 ---
 
 **Table of Contents**

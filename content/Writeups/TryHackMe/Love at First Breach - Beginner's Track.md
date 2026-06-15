@@ -266,7 +266,8 @@ This spawns a shell on the server, where we can now discover directories and fin
 ![[Pasted image 20260220131326.png]]
 
 The first user flag can be found easily. But, for the root flag, you would need sudo privileges to access `/root` directory.  
-So, I inspected myself what permissions do I have with `sudo -l`:
+So, I inspected myself what permissions do I have with `sudo -l`:  
+
 ![[Pasted image 20260220131949.png]]
 
 We can see that I'm allowed to run **Python3** as a root user without entering password. With this being, I run a Python script with sudo and gain an interactive root shell session:

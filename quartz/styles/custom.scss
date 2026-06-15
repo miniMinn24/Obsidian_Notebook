@@ -62,3 +62,35 @@
   display: block;
 }
 /* Hide icons in sidebar / file tree */
+/* Override the generated dark theme colors */
+[saved-theme="dark"] code[data-theme*=" "] {
+   --shiki-dark-bg: #1a1d21 !important;    /* Force background color */
+}
+/* Force Light Mode to use Dark Mode colors */
+[saved-theme="light"] code[data-theme*=" "] {
+  --shiki-light: var(--shiki-dark) !important;       /* Match text color */
+  --shiki-light-bg: var(--shiki-dark-bg) !important; /* Match background color */
+}
+
+/* Ensure spans inside light mode code blocks also match */
+[saved-theme="light"] code[data-theme*=" "] span {
+  color: var(--shiki-dark) !important; 
+}
+
+
+
+/* quartz/styles/custom.scss */
+
+/* Override inline code colors */
+:not(pre) > code {
+  background-color: #e8e8e8 !important; /* e.g., #24292f */
+  border: none !important;
+}
+
+/* If you want to match your block code exactly, reuse the shiki variables */
+[saved-theme="light"] :not(pre) > code {
+  background-color: #e8e8e8 !important;
+}
+[saved-theme="dark"] :not(pre) > code {
+  background-color: #24272b !important;
+}

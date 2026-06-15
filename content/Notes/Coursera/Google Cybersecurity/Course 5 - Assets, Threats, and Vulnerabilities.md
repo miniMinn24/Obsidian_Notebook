@@ -148,3 +148,75 @@ $ sha256 <filename>
 
 ![[Pasted image 20260612161106.png]]
 
+## Defense in depth strategy
+1. **Perimeter layer**, like authentication systems that validate user access
+2. **Network layer**, which is made up of technologies like network firewalls and others
+3. **Endpoint layer**, which describes devices on a network, like laptops, desktops, or servers
+4. **Application layer**, which involves the software that users interact with
+5. **Data layer**, which includes any information that’s stored, in transit, or in use
+
+## Common vulnerabilities and exposures
+
+- **Common Vulnerabilities and Exposures list (CVE list)**: An openly accessible dictionary of known vulnerabilities and exposures.
+	- **CVE list criteria**
+	- Independent of other issues
+	- Recognized as a potential security risk
+	- Submitted with supporting evidence
+	- Only affect one codebase
+- **CVE Numbering Authority (CNA)**: An organization that volunteers to analyze and distribute information on eligible CVEs.
+- **Common Vulnerability Scoring System (CVSS)**: A measurement system that scores the severity of a vulnerability.
+
+**MITRE**: A collection of non-profit research and development centers.  
+
+## The OWASP Top 10
+**Open Worldwide Application Security Project** that security professionals from around the world use to share information, tools, and events that are focused on securing the web.  
+
+#### 1. Broken access control
+Access controls limit what users can do in a web application. For example, a blog might allow visitors to post comments on a recent article but restricts them from deleting the article entirely. 
+
+#### 2. Cryptographic failures
+Information is one of the most important assets businesses need to protect. Privacy laws such as General Data Protection Regulation (GDPR) require sensitive data to be protected by effective encryption methods. 
+
+#### 3. Injection
+Injection occurs when malicious code is inserted into a vulnerable application. Although the app appears to work normally, it does things that it wasn’t intended to do. Injection attacks can give threat actors a backdoor into an organization’s information system (target: login forms).
+
+#### 4. Insecure design
+Applications should be designed in such a way that makes them resilient to attack. Insecure design refers to a wide range of missing or poorly implemented security controls that should have been programmed into an application when it was being developed.
+
+#### 5. Security misconfiguration
+Misconfigurations occur when security settings aren’t properly set or maintained. A common example is when businesses deploy equipment, like a network server, using default settings. 
+
+#### 6. Vulnerable and outdated components
+Vulnerable and outdated components is a category that mainly relates to application development. Applications that use vulnerable components that have not been maintained are at greater risk of being exploited by threat actors.
+
+#### 7. Identification and authentication failures
+When applications fail to recognize who should have access and what they’re authorized to do, it can lead to serious problems. For example, a home Wi-Fi router normally uses a simple login form to keep unwanted guests off the network.
+
+#### 8. Software and data integrity failures
+Software and data integrity failures are instances when updates or patches are inadequately reviewed before implementation. A famous example of a supply chain attack is the [SolarWinds cyber attack (2020)](https://www.gao.gov/blog/solarwinds-cyberattack-demands-significant-federal-and-private-sector-response-infographic) where hackers injected malicious code into software updates that the company unknowingly released to their customers.
+
+#### 9. Security logging and monitoring failures
+Having a record of events like user login attempts is critical to finding and fixing problems. Sufficient monitoring and incident response is equally important.
+
+#### 10. Server-side request forgery
+Companies have public and private information stored on web servers. When you use a hyperlink or click a button on a website, a request is sent to a server that should validate who you are, fetch the appropriate data, and then return it to you.
+
+![[Pasted image 20260612181726.png]]
+
+### OSINT Tools
+- VirusTotal is a service that allows anyone to analyze suspicious files, domains, URLs, and IP addresses for malicious content.
+- MITRE ATT&CK® is a knowledge base of adversary tactics and techniques based on real-world observations.
+- OSINT Framework is a web-based interface where you can find OSINT tools for almost any kind of source or platform.
+- Have I been Pwned is a tool that can be used to search for breached email accounts.
+
+## Vulnerability assessment process
+1. Identification
+2. Vulnerability analysis
+3. Risk assessment
+4. Remediation
+
+## Penetration testing strategies
+- **Open-box testing** is when the tester has the same privileged access that an internal developer would have—information like system architecture, data flow, and network diagrams. This strategy goes by several different names, including internal, full knowledge, white-box, and clear-box penetration testing.
+- **Closed-box testing** is when the tester has little to no access to internal systems—similar to a malicious hacker. This strategy is sometimes referred to as external, black-box, or zero knowledge penetration testing.
+- **Partial knowledge testing** is when the tester has limited access and knowledge of an internal system—for example, a customer service representative. This strategy is also known as gray-box testing.
+

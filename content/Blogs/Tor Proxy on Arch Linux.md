@@ -129,5 +129,5 @@ This script can be executed any time you need to obtain a new circuit.
 ## Configure Web Browser to Use Tor Network
 - Open settings panel - Firefox: `about:preferences` in search bar > General > Network Settings - "Settings..." button.
 - "Manual proxy configuration" and enter `localhost` under the "SOCKS Host" field, port `9050`.
-- Go to [IP Chicken](ipchicken.com) to make sure that you are connected to the Tor network.
+- Go to [IP Chicken](https://ipchicken.com) to make sure that you are connected to the Tor network.
 
