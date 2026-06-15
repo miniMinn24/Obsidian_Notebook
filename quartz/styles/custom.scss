@@ -94,3 +94,57 @@
 [saved-theme="dark"] :not(pre) > code {
   background-color: #24272b !important;
 }
+
+
+
+// /* Light Mode Sidebar Background */
+// [saved-theme="light"] .sidebar.left {
+//   background-color: #f2f3f5 !important; /* Your light mode color */
+// }
+//
+// /* Dark Mode Sidebar Background */
+// [saved-theme="dark"] .sidebar.left {
+//   background-color: #1c1f24 !important; /* Your dark mode color */
+// }
+//
+
+
+
+
+
+/* --- Sidebar Font Size --- */
+.sidebar, .sidebar-content, .nav-file-title, .nav-folder-title {
+    font-size: 0.85rem; /* Adjust size (e.g., 0.8rem, 0.9rem) */
+    line-height: 1.4;
+}
+
+/* --- Layout Padding & Margins --- */
+
+/* 1. Main Content Area Padding */
+.page-content, .markdown-preview {
+    padding: 2rem 3rem; /* Top/Bottom: 2rem, Left/Right: 3rem */
+    max-width: 900px;   /* Optional: Limit text width */
+    margin: 0 auto;     /* Center the content */
+}
+
+/* 2. Adjust Sidebar Padding/Margins */
+.sidebar {
+    padding: 1rem;
+    margin-right: 0; /* Remove default gap if needed */
+}
+
+/* 3. Adjust Spacing Between Elements */
+.markdown-preview p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile Responsiveness (Optional) */
+@media (max-width: 768px) {
+    .page-content {
+        padding: 1rem;
+    }
+    .sidebar {
+        font-size: 1rem; /* Larger font on mobile if desired */
+    }
+}

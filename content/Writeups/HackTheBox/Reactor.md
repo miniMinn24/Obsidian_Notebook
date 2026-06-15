@@ -5,8 +5,7 @@ tags:
   - ctf
   - web
 catagory:
-  - web
-  - active
+  - writeup
 author: miniMinn
 difficulty: easy
 platform:
@@ -19,3 +18,4 @@ platform:
 > *This machine involved web enumeration, exploitation of a vulnerable web framework, credential discovery from a database, SSH access, and privilege escalation through a misconfigured Node.js debugging service.*
 
 # Reconnaissance
+

@@ -1,0 +1,22 @@
+filters:
+  and:
+    - file.ext == "md"
+formulas:
+  "": ""
+views:
+  - type: table
+    name: Table
+    groupBy:
+      property: catagory
+      direction: ASC
+    order:
+      - file.name
+      - catagory
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: cards
+    name: View
+    order:
+      - file.name
+    imageAspectRatio: 1
