@@ -148,3 +148,27 @@
         font-size: 1rem; /* Larger font on mobile if desired */
     }
 }
+
+
+
+
+/* Force separate colors for standard blockquotes */
+.markdown-body blockquote {
+  /* 1. Force the left border color independently */
+  border-left: 4px solid rgb(255, 100, 100) !important; 
+  
+  /* 2. Force the text color independently */
+  color: rgb(60, 60, 60) !important; 
+  
+  /* 3. Ensure background remains distinct (optional) */
+  background-color: rgb(250, 250, 250) !important; 
+}
+
+/* 4. CRITICAL: Ensure paragraphs inside the blockquote inherit the forced text color */
+.markdown-body blockquote p {
+  color: inherit !important;
+}
+
+
+
+

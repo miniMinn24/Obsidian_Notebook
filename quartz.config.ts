@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "miniMinn.md",
+    pageTitle: "~/Sec",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
@@ -23,6 +23,7 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
+        title: "tiny5",
         header: "Inter",
         body: "JetBrains Mono",
         code: "JetBrains Mono",
